@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 /**
- * Basic test for the calculator class.
+ * Basic test for the calculator class (given by the professor).
  */
 public class CalculatorPrototypeTest {
 
