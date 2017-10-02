@@ -10,11 +10,11 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Test for the calculator class.
+ * Detailed test for the calculator class.
  */
 public class CalculatorPrototypeTestExtended {
 
-    /**
+    /*
      * Test the sum between two positive numbers.
      */
     @Test
@@ -24,7 +24,7 @@ public class CalculatorPrototypeTestExtended {
         assertEquals(6, sum);
     }
 
-    /**
+    /*
      * Test the sum with the first addend negative.
      */
     @Test
@@ -34,7 +34,7 @@ public class CalculatorPrototypeTestExtended {
         assertEquals(-1, sum);
     }
 
-    /**
+    /*
      * Test the sum with the second addend negative.
      */
     @Test
@@ -44,7 +44,7 @@ public class CalculatorPrototypeTestExtended {
         assertEquals(1, sum);
     }
 
-    /**
+    /*
      * Test the sum between two negative numbers.
      */
     @Test
@@ -54,7 +54,7 @@ public class CalculatorPrototypeTestExtended {
         assertEquals(-7, sum);
     }
 
-    /**
+    /*
      * Test the subtraction between two positive numbers.
      */
     @Test
@@ -64,7 +64,7 @@ public class CalculatorPrototypeTestExtended {
         assertEquals(-1, dif);
     }
 
-    /**
+    /*
      * Test the subtraction with the first term negative.
      */
     @Test
@@ -74,7 +74,7 @@ public class CalculatorPrototypeTestExtended {
         assertEquals(-9, dif);
     }
 
-    /**
+    /*
      * Test the subtraction with the second term negative.
      */
     @Test
@@ -84,7 +84,7 @@ public class CalculatorPrototypeTestExtended {
         assertEquals(6, dif);
     }
 
-    /**
+    /*
      * Test the subtraction between two negative numbers.
      */
     @Test
@@ -94,7 +94,7 @@ public class CalculatorPrototypeTestExtended {
         assertEquals(-3, dif);
     }
 
-    /**
+    /*
      * Test the multiplication between two positive numbers.
      */
     @Test
@@ -104,7 +104,7 @@ public class CalculatorPrototypeTestExtended {
         assertEquals(6, mul);
     }
 
-    /**
+    /*
      * Test the multiplication with the first factor negative.
      */
     @Test
@@ -114,7 +114,7 @@ public class CalculatorPrototypeTestExtended {
         assertEquals(-6, mul);
     }
 
-    /**
+    /*
      * Test the multiplication with the second factor negative.
      */
     @Test
@@ -124,7 +124,7 @@ public class CalculatorPrototypeTestExtended {
         assertEquals(-6, mul);
     }
 
-    /**
+    /*
      * Test the multiplication between two negative numbers.
      */
     @Test
@@ -134,7 +134,7 @@ public class CalculatorPrototypeTestExtended {
         assertEquals(6, mul);
     }
 
-    /**
+    /*
      * Test the multiplication with one factor zero.
      */
     @Test
@@ -144,7 +144,7 @@ public class CalculatorPrototypeTestExtended {
         assertEquals(0, mul);
     }
 
-    /**
+    /*
      * Test the exact division between two positive numbers.
      */
     @Test
@@ -154,7 +154,7 @@ public class CalculatorPrototypeTestExtended {
         assertEquals(2, div);
     }
 
-    /**
+    /*
      * Test the not exact division between two positive numbers.
      */
     @Test
@@ -164,8 +164,8 @@ public class CalculatorPrototypeTestExtended {
         assertEquals(2, div);
     }
 
-    /**
-     * Test the exact division between with a negative dividend
+    /*
+     * Test the exact division with a negative dividend
      * and a positive divisor.
      */
     @Test
@@ -175,8 +175,8 @@ public class CalculatorPrototypeTestExtended {
         assertEquals(-2, div);
     }
 
-    /**
-     * Test the exact division between with a positive dividend
+    /*
+     * Test the exact division with a positive dividend
      * and a negative divisor.
      */
     @Test
@@ -186,8 +186,8 @@ public class CalculatorPrototypeTestExtended {
         assertEquals(-2, div);
     }
 
-    /**
-     * Test the not exact division between with a negative dividend
+    /*
+     * Test the not exact division with a negative dividend
      * and a positive divisor.
      */
     @Test
@@ -197,8 +197,8 @@ public class CalculatorPrototypeTestExtended {
         assertEquals(-2, div);
     }
 
-    /**
-     * Test the not exact division between with a positive dividend
+    /*
+     * Test the not exact division with a positive dividend
      * and a negative divisor.
      */
     @Test
@@ -208,7 +208,7 @@ public class CalculatorPrototypeTestExtended {
         assertEquals(-2, div);
     }
 
-    /**
+    /*
      * Test the division by zero.
      */
     @Test(expected = ArithmeticException.class)
