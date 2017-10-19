@@ -42,7 +42,7 @@ public class DoodleController {
      * @return the JSON representation of the poll ID
      */
     @RequestMapping(value = "/doodles", method = RequestMethod.PUT)
-    public int createDoodle(@RequestBody String title, @RequestBody List<String> opt) {
+    public int createDoodleExplicit(@RequestBody String title, @RequestBody List<String> opt) {
         doodles.put(id, new Doodle(title, opt));
         id++;
         return (id - 1);
