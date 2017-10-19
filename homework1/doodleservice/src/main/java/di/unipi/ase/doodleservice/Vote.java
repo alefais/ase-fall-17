@@ -7,7 +7,8 @@
 package di.unipi.ase.doodleservice;
 
 /**
- * Vote class (given by the professor): comments have been added.
+ * Vote class (given by the professor):
+ * in addition some exceptions have been handled and the comments have been added to the code.
  */
 public class Vote {
     private String name;
@@ -22,8 +23,10 @@ public class Vote {
      * Construct a new vote given the name of the voter and the chosen option.
      * @param name the voter
      * @param option the option that the voter wants to vote
+     * @throws IllegalArgumentException if the name or the option are null parameters
      */
-    public Vote(String name, String option){
+    public Vote(String name, String option) {
+        if (name == null || option == null) throw new IllegalArgumentException("One or both arguments are null.");
         this.name = name;
         this.option = option;
     }
