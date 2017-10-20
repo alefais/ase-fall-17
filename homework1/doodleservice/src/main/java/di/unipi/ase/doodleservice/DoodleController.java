@@ -8,9 +8,7 @@ package di.unipi.ase.doodleservice;
 
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 
 /**
  * Controller class that defines the behaviour of the RESTful Web API for the Doodle service.
@@ -36,19 +34,6 @@ public class DoodleController {
     }
 
     /**
-     * Create a new doodle and insert it in the list of the currently opened doodles.
-     * @param title the JSON representation of the title contained in the HTTP request body
-     * @param opt the JSON representation of the list of options contained in the HTTP request body
-     * @return the JSON representation of the poll ID
-     */
-    @RequestMapping(value = "/doodles", method = RequestMethod.PUT)
-    public int createDoodleExplicit(@RequestBody String title, @RequestBody List<String> opt) {
-        doodles.put(id, new Doodle(title, opt));
-        id++;
-        return (id - 1);
-    }
-
-    /**
      * Get the currently opened doodles.
      * @return the doodles
      */
@@ -68,36 +53,6 @@ public class DoodleController {
     }
 
     /**
-     * Get the title of the doodle identified by the specific ID.
-     * @param id the ID of the doodle
-     * @return the title of the doodle
-     */
-    @RequestMapping(value = "/doodles/{id}", method = RequestMethod.GET)
-    public String getDoodleTitle(@PathVariable("id") int id) {
-        return doodles.get(id).getTitle();
-    }
-
-    /**
-     * Get the options of the doodle identified by the specific ID.
-     * @param id the ID of the doodle
-     * @return the list of the options of the doodle
-     */
-    @RequestMapping(value = "/doodles/{id}", method = RequestMethod.GET)
-    public ArrayList<String> getDoodleOptions(@PathVariable("id") int id) {
-        return doodles.get(id).getOptions();
-    }
-
-    /**
-     * Get the votes of the doodle identified by the specific ID.
-     * @param id the ID of the doodle
-     * @return the votes for each option of the doodle
-     */
-    @RequestMapping(value = "/doodles/{id}", method = RequestMethod.GET)
-    public HashMap<String, ArrayList<String>> getDoodleVotes(@PathVariable("id") int id) {
-        return doodles.get(id).getVotes();
-    }
-
-    /**
      * Remove the doodle identified by the specific ID.
      * @param id the ID of the doodle
      */
@@ -109,7 +64,8 @@ public class DoodleController {
     // Operations on the votes
 
     /**
-     * Create a new vote in the doodle identified by the specific ID.
+     * Create a new vote in the doodle identified by the specific ID
+     * (it has effect only if the voter didn't vote yet for this doodle).
      * @param id the ID of the doodle
      * @param v the JSON representation of the vote contained in the HTTP request body
      * @return the name of the voter if the vote is valid, null otherwise
@@ -144,7 +100,7 @@ public class DoodleController {
     @RequestMapping(value = "/doodles/{id}/vote/{name}", method = RequestMethod.POST)
     public String updateVote(@PathVariable("id") int id, @PathVariable("name") String name, @RequestBody Vote v) {
         if (doodles.containsKey(id) && name.equals(v.getName()) &&
-                doodles.get(id).findPreviousVote(v.getName()) != null)
+                doodles.get(id).findPreviousVote(name) != null)
             return doodles.get(id).addVote(v);
         return null;
     }
