@@ -4,7 +4,7 @@ A collection of homework that are part of the Advanced Software Engineering cour
 | <b>Homework number</b> | <b>Language/Framework/Tool</b> | <b>Description</b> |
 | ---------- | ----------------------- | ----------- |
 | 0 | Java | A calculator prototype implemented in Java and the complete JUnit tests. |
-| 1 | Java, REST, Spring, Heroku | A RESTful Web API for a Doodle service where each participant can express one preference only. The RESTful web service has been implemented in Java, using the link:https://projects.spring.io/spring-boot/[Spring Boot], and deployed using Heroku. |
+| 1 | Java, REST, Spring, Heroku | A RESTful Web API for a Doodle service where each participant can express one preference only. The RESTful web service has been implemented in Java, using the [Spring Boot](https://projects.spring.io/spring-boot/), and deployed using Heroku. |
 | 2 | XML, OpenESB, WSDL, BPEL, SOAP, REST | 
 | 3 | XML, OpenESB, WSDL, BPEL, SOAP |
 | 4 | BPEL, Workflow nets, WoPeD |
