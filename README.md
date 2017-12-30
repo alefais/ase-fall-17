@@ -4,9 +4,9 @@ A collection of homework that are part of the Advanced Software Engineering cour
 | <b>Homework number</b> | <b>Language/Framework/Tool</b> | <b>Description</b> |
 | ---------- | ----------------------- | ----------- |
 | 0 | Java | A calculator prototype implemented in Java and the complete JUnit tests. |
-| 1 | Java, REST, Spring, Heroku | A RESTful Web API for a Doodle service where each participant can express one preference only. The RESTful web service has been implemented in Java, using the [Spring Boot](https://projects.spring.io/spring-boot/), and deployed using Heroku. |
-| 2 | XML, OpenESB, WSDL, BPEL, SOAP, REST | 
-| 3 | XML, OpenESB, WSDL, BPEL, SOAP |
-| 4 | BPEL, Workflow nets, WoPeD |
-| 5 | Bash, Docker |
-| 6 | TOSCA, Yaml, Docker, TosKer, TosKeriser, Bash |
+| 1 | Java, REST, Spring, Heroku | A RESTful Web API for a Doodle service where each participant can express one preference only. The RESTful web service has been implemented in Java, employing [Spring Boot](https://projects.spring.io/spring-boot/) tool, and deployed using [Heroku](https://www.heroku.com/). |
+| 2 | XML, OpenESB, WSDL, BPEL, SOAP, REST | A Web Service that takes as input an IP address (of the server), and returns the current weather in the city (and country) associated to the IP address. The BPEL process has been implemented by orchestrating the WS* service [IP2Geo](http://ws.cdyne.com/ip2geo/ip2geo.asmx) (that given the IP address returns the city and country) and the RESTful service [OpenWeatherMap](http://api.openweathermap.org/data/2.5/weather) (that given the country returns the weather) using the [OpenESB](http://www.open-esb.net/) framework. |
+| 3 | XML, OpenESB, WSDL, BPEL, SOAP | A Web Service that takes as input the code of an airport, and returns its full name and the time zone of the location of the airport. The WS-BPEL process has been implemented by orchestrating the WS* service [Airport Information](http://www.webservicex.net/airport.asmx) (that given the code returns the informations about the airport) and the WS* service [Country]( http://www.webservicex.net/country.asmx) (that given the country returns the correspondent time zone) and handling the faults. The framework used is [OpenESB](http://www.open-esb.net/). |
+| 4 | BPEL, Workflow nets, WoPeD | The model that represents the control flow of the WS-BPEL process with a sound workflow net using the [WoPeD](http://woped.dhbw-karlsruhe.de/woped/) tool. |
+| 5 | Bash, Docker | A Bash script that prints a quote (passed as argument or generated with the [fortune](https://en.wikipedia.org/wiki/Fortune_(Unix)) program) with the [cowthink](https://en.wikipedia.org/wiki/Cowsay) program. The application has been deployed as a [Docker](https://www.docker.com/) image built from a Dockerfile and run inside a Docker container. |
+| 6 | TOSCA, Yaml, Docker, TosKer, TosKeriser, Bash | The toy Doodle web service (Homework number 1), described with the [TOSCA](https://en.wikipedia.org/wiki/OASIS_TOSCA) language and deployed in a Docker container using the [TosKer](https://github.com/di-unipi-socc/TosKer) and [TosKeriser](https://github.com/di-unipi-socc/TosKeriser) tools.
