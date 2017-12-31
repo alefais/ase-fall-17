@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<casa xmlns="http://java.sun.com/xml/ns/casa" xmlns:ns1="http://j2ee.netbeans.org/wsdl/WeatherFromIP/src/ClientWSDL" xmlns:ns2="http://j2ee.netbeans.org/wsdl/WeatherFromIP/src/OpenWeatherMapWDSL" xmlns:ns3="http://ws.cdyne.com/" xmlns:ns4="http://enterprise.netbeans.org/bpel/WeatherFromIP/weatherFromIP" xmlns:xlink="http://www.w3.org/2000/xlink">
+    <endpoints>
+        <endpoint endpoint-name="ClientWSDLPort" interface-name="ns1:ClientWSDLPortType" name="endpoint1" service-name="ns1:ClientWSDLService"/>
+        <endpoint endpoint-name="RestOutboundWSDL_OutboundPort" interface-name="ns2:RestOutboundPortType" name="endpoint2" service-name="ns2:RestOutboundService"/>
+        <endpoint endpoint-name="IP2GeoSoap12" interface-name="ns3:IP2GeoSoap" name="endpoint3" service-name="ns3:IP2Geo"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="ClientWSDLPortTypeRole_myRole" file-path="weatherFromIP.bpel" interface-name="ns1:ClientWSDLPortType" name="endpoint4" process-name="weatherFromIP" service-name="ns4:PartnerLink2"/>
+        <endpoint display-name="PartnerLink3" endpoint-name="IP2GeoSoapRole_partnerRole" file-path="weatherFromIP.bpel" interface-name="ns3:IP2GeoSoap" name="endpoint5" process-name="weatherFromIP" service-name="ns4:PartnerLink3"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="RestOutboundPortTypeRole_partnerRole" file-path="weatherFromIP.bpel" interface-name="ns2:RestOutboundPortType" name="endpoint6" process-name="weatherFromIP" service-name="ns4:PartnerLink1"/>
+    </endpoints>
+    <service-units>
+        <service-engine-service-unit artifacts-zip="WeatherFromIP.jar" component-name="sun-bpel-engine" defined="true" description="Represents this Service Unit" internal="true" name="WeatherFromIPCA-WeatherFromIP" unit-name="WeatherFromIP" unknown="false" x="145" y="97">
+            <provides endpoint="endpoint4"/>
+            <consumes endpoint="endpoint5"/>
+            <consumes endpoint="endpoint6"/>
+        </service-engine-service-unit>
+        <binding-component-service-unit artifacts-zip="sun-http-binding.jar" component-name="sun-http-binding" description="Represents this Service Unit" name="WeatherFromIPCA-sun-http-binding" unit-name="sun-http-binding">
+            <ports>
+                <port x="67" y="208">
+                    <link xlink:href="../jbiServiceUnits/WeatherFromIP/ClientWSDL.wsdl#xpointer(/definitions/service[@name='ClientWSDLService']/port[@name='ClientWSDLPort'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint1"/>
+                    <provides endpoint="endpoint1"/>
+                </port>
+                <port bindingType="soap12" x="67" y="37">
+                    <link xlink:href="../jbiServiceUnits/WeatherFromIP/ws.cdyne.com/ip2geo/ip2geo.asmx.wsdl#xpointer(/definitions/service[@name='IP2Geo']/port[@name='IP2GeoSoap12'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint3"/>
+                    <provides endpoint="endpoint3"/>
+                </port>
+            </ports>
+        </binding-component-service-unit>
+        <binding-component-service-unit artifacts-zip="sun-rest-binding.jar" component-name="sun-rest-binding" description="Represents this Service Unit" name="WeatherFromIPCA-sun-rest-binding" unit-name="sun-rest-binding">
+            <ports>
+                <port x="67" y="131">
+                    <link xlink:href="../jbiServiceUnits/WeatherFromIP/OpenWeatherMapWDSL.wsdl#xpointer(/definitions/service[@name='RestOutboundService']/port[@name='RestOutboundWSDL_OutboundPort'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint2"/>
+                    <provides endpoint="endpoint2"/>
+                </port>
+            </ports>
+        </binding-component-service-unit>
+    </service-units>
+    <connections>
+        <connection consumer="endpoint6" provider="endpoint2" state="unchanged"/>
+        <connection consumer="endpoint1" provider="endpoint4" state="unchanged"/>
+        <connection consumer="endpoint5" provider="endpoint3" state="new"/>
+    </connections>
+    <porttypes>
+        <link xlink:href="../jbiServiceUnits/WeatherFromIP/ClientWSDL.wsdl#xpointer(/definitions/portType[@name='ClientWSDLPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WeatherFromIP/OpenWeatherMapWDSL.wsdl#xpointer(/definitions/portType[@name='RestOutboundPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WeatherFromIP/ws.cdyne.com/ip2geo/ip2geo.asmx.wsdl#xpointer(/definitions/portType[@name='IP2GeoSoap'])" xlink:type="simple"/>
+    </porttypes>
+    <bindings>
+        <link xlink:href="../jbiServiceUnits/WeatherFromIP/ClientWSDL.wsdl#xpointer(/definitions/binding[@name='ClientWSDLBinding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WeatherFromIP/OpenWeatherMapWDSL.wsdl#xpointer(/definitions/binding[@name='RestOutboundBinding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WeatherFromIP/ws.cdyne.com/ip2geo/ip2geo.asmx.wsdl#xpointer(/definitions/binding[@name='IP2GeoSoap'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WeatherFromIP/ws.cdyne.com/ip2geo/ip2geo.asmx.wsdl#xpointer(/definitions/binding[@name='IP2GeoSoap12'])" xlink:type="simple"/>
+    </bindings>
+    <services>
+        <link xlink:href="../jbiServiceUnits/WeatherFromIP/ClientWSDL.wsdl#xpointer(/definitions/service[@name='ClientWSDLService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WeatherFromIP/OpenWeatherMapWDSL.wsdl#xpointer(/definitions/service[@name='RestOutboundService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WeatherFromIP/ws.cdyne.com/ip2geo/ip2geo.asmx.wsdl#xpointer(/definitions/service[@name='IP2Geo'])" xlink:type="simple"/>
+    </services>
+    <regions>
+        <region name="WSDL Endpoints" width="150"/>
+        <region name="JBI Modules" width="500"/>
+        <region name="External Modules" width="200"/>
+    </regions>
+</casa>

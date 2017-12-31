@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns0="http://enterprise.netbeans.org/bpel/WeatherFromIP/weatherFromIP" xmlns:ns1="http://ws.cdyne.com/" xmlns:ns2="http://j2ee.netbeans.org/wsdl/WeatherFromIP/src/ClientWSDL" xmlns:ns3="http://j2ee.netbeans.org/wsdl/WeatherFromIP/src/OpenWeatherMapWDSL" xmlns:ns4="http://www.sun.com/jbi/descriptor/service-unit" version="1.0">
+    <services binding-component="false">
+        <provides endpoint-name="ClientWSDLPortTypeRole_myRole" interface-name="ns2:ClientWSDLPortType" service-name="ns0:PartnerLink2">
+            <ns4:display-name>PartnerLink2</ns4:display-name>
+            <ns4:process-name>weatherFromIP</ns4:process-name>
+            <ns4:file-path>weatherFromIP.bpel</ns4:file-path>
+        </provides>
+        <consumes endpoint-name="IP2GeoSoapRole_partnerRole" interface-name="ns1:IP2GeoSoap" service-name="ns0:PartnerLink3">
+            <ns4:display-name>PartnerLink3</ns4:display-name>
+            <ns4:process-name>weatherFromIP</ns4:process-name>
+            <ns4:file-path>weatherFromIP.bpel</ns4:file-path>
+        </consumes>
+        <consumes endpoint-name="RestOutboundPortTypeRole_partnerRole" interface-name="ns3:RestOutboundPortType" service-name="ns0:PartnerLink1">
+            <ns4:display-name>PartnerLink1</ns4:display-name>
+            <ns4:process-name>weatherFromIP</ns4:process-name>
+            <ns4:file-path>weatherFromIP.bpel</ns4:file-path>
+        </consumes>
+    </services>
+</jbi>

@@ -1,0 +1,23 @@
+#Alessandra Fais - ASE 2017/18 - homework 5
+
+#Set the base image of the container
+FROM ubuntu:latest
+
+#Set the author of the generated image
+MAINTAINER Alessandra Fais alessandra.fais@gmail.com
+
+#Set the working directory
+WORKDIR /root/Documents/
+
+#Copy the script
+COPY entrypoint.sh entrypoint.sh
+
+#Give execute permission
+RUN chmod +x entrypoint.sh
+
+#Execute in a new layer on top of the current image and commit the results
+RUN apt-get update && apt-get install -y cowsay fortune
+
+#Configure the container in order to run as an executable
+ENTRYPOINT ["/root/Documents/entrypoint.sh"]
+

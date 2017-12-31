@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="WTAClientWSDL" targetNamespace="http://j2ee.netbeans.org/wsdl/WhatsTheAirport/src/WTAClientWSDL"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://j2ee.netbeans.org/wsdl/WhatsTheAirport/src/WTAClientWSDL" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <types/>
+    <message name="WTAClientWSDLOperationRequest">
+        <part name="airportCode" type="xsd:string"/>
+    </message>
+    <message name="WTAClientWSDLOperationResponse">
+        <part name="airportName" type="xsd:string"/>
+        <part name="timeZone" type="xsd:string"/>
+    </message>
+    <message name="WTAClientFault1">
+        <part name="faultMessage" type="xsd:string"/>
+    </message>
+    <message name="WTAClientFault2">
+        <part name="faultMessage" type="xsd:string"/>
+        <part name="airportName" type="xsd:string"/>
+        <part name="country" type="xsd:string"/>
+    </message>
+    <portType name="WTAClientWSDLPortType">
+        <operation name="WTAClientWSDLOperation">
+            <input name="input1" message="tns:WTAClientWSDLOperationRequest"/>
+            <output name="output1" message="tns:WTAClientWSDLOperationResponse"/>
+            <fault name="EmptyInformationsString" message="tns:WTAClientFault1"/>
+            <fault name="UnknownCountry" message="tns:WTAClientFault2"/>
+        </operation>
+    </portType>
+    <binding name="WTAClientWSDLBinding" type="tns:WTAClientWSDLPortType">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <operation name="WTAClientWSDLOperation">
+            <soap:operation/>
+            <input name="input1">
+                <soap:body use="literal" namespace="http://j2ee.netbeans.org/wsdl/WhatsTheAirport/src/WTAClientWSDL"/>
+            </input>
+            <output name="output1">
+                <soap:body use="literal" namespace="http://j2ee.netbeans.org/wsdl/WhatsTheAirport/src/WTAClientWSDL"/>
+            </output>
+            <fault name="EmptyInformationsString">
+                <soap:fault name="EmptyInformationsString"/>
+            </fault>
+            <fault name="UnknownCountry">
+                <soap:fault name="UnknownCountry"/>
+            </fault>
+        </operation>
+    </binding>
+    <service name="WTAClientWSDLService">
+        <port name="WTAClientWSDLPort" binding="tns:WTAClientWSDLBinding">
+            <soap:address location="http://localhost:${HttpDefaultPort}/WTAClientWSDLService/WTAClientWSDLPort"/>
+        </port>
+    </service>
+    <plnk:partnerLinkType name="WTAClientWSDL">
+        <!-- A partner link type is automatically generated when a new port type is added. Partner link types are used by BPEL processes. 
+In a BPEL process, a partner link represents the interaction between the BPEL process and a partner service. Each partner link is associated with a partner link type.
+A partner link type characterizes the conversational relationship between two services. The partner link type can have one or two roles.-->
+        <plnk:role name="WTAClientWSDLPortTypeRole" portType="tns:WTAClientWSDLPortType"/>
+    </plnk:partnerLinkType>
+</definitions>

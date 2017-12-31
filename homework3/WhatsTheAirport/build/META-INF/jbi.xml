@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns0="http://enterprise.netbeans.org/bpel/WhatsTheAirport/whatsTheAirport" xmlns:ns1="http://www.webserviceX.NET" xmlns:ns2="http://j2ee.netbeans.org/wsdl/WhatsTheAirport/src/WTAClientWSDL" xmlns:ns3="http://www.sun.com/jbi/descriptor/service-unit" version="1.0">
+    <services binding-component="false">
+        <provides endpoint-name="WTAClientWSDLPortTypeRole_myRole" interface-name="ns2:WTAClientWSDLPortType" service-name="ns0:PartnerLink1">
+            <ns3:display-name>PartnerLink1</ns3:display-name>
+            <ns3:process-name>whatsTheAirport</ns3:process-name>
+            <ns3:file-path>whatsTheAirport.bpel</ns3:file-path>
+        </provides>
+        <consumes endpoint-name="airportSoapRole_partnerRole" interface-name="ns1:airportSoap" service-name="ns0:PartnerLink2">
+            <ns3:display-name>PartnerLink2</ns3:display-name>
+            <ns3:process-name>whatsTheAirport</ns3:process-name>
+            <ns3:file-path>whatsTheAirport.bpel</ns3:file-path>
+        </consumes>
+        <consumes endpoint-name="countrySoapRole_partnerRole" interface-name="ns1:countrySoap" service-name="ns0:PartnerLink3">
+            <ns3:display-name>PartnerLink3</ns3:display-name>
+            <ns3:process-name>whatsTheAirport</ns3:process-name>
+            <ns3:file-path>whatsTheAirport.bpel</ns3:file-path>
+        </consumes>
+    </services>
+</jbi>

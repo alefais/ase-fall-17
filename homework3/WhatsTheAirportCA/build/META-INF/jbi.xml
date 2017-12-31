@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jbi xmlns="http://java.sun.com/xml/ns/jbi" xmlns:ns1="http://j2ee.netbeans.org/wsdl/WhatsTheAirport/src/WTAClientWSDL" xmlns:ns2="http://enterprise.netbeans.org/bpel/WhatsTheAirport/whatsTheAirport" xmlns:ns3="http://www.webserviceX.NET" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/jbi ./jbi.xsd">
+    <service-assembly>
+        <identification>
+            <name>WhatsTheAirportCA</name>
+            <description>Represents the Service Assembly of WhatsTheAirportCA</description>
+        </identification>
+        <service-unit>
+            <identification>
+                <name>WhatsTheAirportCA-WhatsTheAirport</name>
+                <description>Represents this Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>WhatsTheAirport.jar</artifacts-zip>
+                <component-name>sun-bpel-engine</component-name>
+            </target>
+        </service-unit>
+        <service-unit>
+            <identification>
+                <name>WhatsTheAirportCA-sun-http-binding</name>
+                <description>Represents this Service Unit</description>
+            </identification>
+            <target>
+                <artifacts-zip>sun-http-binding.jar</artifacts-zip>
+                <component-name>sun-http-binding</component-name>
+            </target>
+        </service-unit>
+        <connections>
+            <connection>
+                <consumer endpoint-name="WTAClientWSDLPort" service-name="ns1:WTAClientWSDLService"/>
+                <provider endpoint-name="WTAClientWSDLPortTypeRole_myRole" service-name="ns2:PartnerLink1"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="airportSoapRole_partnerRole" service-name="ns2:PartnerLink2"/>
+                <provider endpoint-name="airportSoap12" service-name="ns3:airport"/>
+            </connection>
+            <connection>
+                <consumer endpoint-name="countrySoapRole_partnerRole" service-name="ns2:PartnerLink3"/>
+                <provider endpoint-name="countrySoap12" service-name="ns3:country"/>
+            </connection>
+        </connections>
+    </service-assembly>
+</jbi>

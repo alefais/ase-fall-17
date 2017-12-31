@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="host-131-114-214-110.m.unipi.it" name="org.netbeans.modules.compapp.catd.ConfiguredTest" tests="7" time="4.786" timestamp="2017-11-09T16:35:53">
+  <properties>
+    <property name="libs.jsp-compiler.javadoc" value="" />
+    <property name="netbeans.autoupdate.country" value="US" />
+    <property name="com.sun.jbi.sa.internal.routing" value="true" />
+    <property name="libs.Encoder-HL7.javadoc" value="" />
+    <property name="libs.jsf20.maven-pom" value="" />
+    <property name="source.root" value="src" />
+    <property name="libs.junit.javadoc" value="/Applications/netbeans.app/Contents/Resources/netbeans/java/docs/junit-3.8.2-api.zip" />
+    <property name="ant.file.WhatsTheAirportCA-jbi-impl" value="/Users/ale/Documents/Computer Science and Networking/ASE - Advanced Software Engineering/homeworks/hw_04/consegna/WhatsTheAirportCA/nbproject/build-impl.xml" />
+    <property name="ant.core.lib" value="/Applications/netbeans.app/Contents/Resources/netbeans/java/ant/lib/ant.jar" />
+    <property name="libs.jsp-compilation.javadoc" value="" />
+    <property name="user.dir" value="/Users/ale/Documents/Computer Science and Networking/ASE - Advanced Software Engineering/homeworks/hw_04/consegna/WhatsTheAirportCA" />
+    <property name="com.apple.mrj.application.apple.menu.about.name" value="OpenESB IDE" />
+    <property name="libs.javaee-api-7.0.src" value="" />
+    <property name="libs.hibernate-persistence.javadoc" value="" />
+    <property name="java.vm.version" value="24.80-b11" />
+    <property name="libs.jstl11.maven-pom" value="" />
+    <property name="libs.MySQLDriver.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/ext/mysql-connector-java-5.1.23-bin.jar" />
+    <property name="jbi.content.additional" value="../WhatsTheAirport/build/SEDeployment.jar" />
+    <property name="libs.eclipselinkmodelgen.src" value="" />
+    <property name="libs.jstl11.src" value="" />
+    <property name="netbeans.autoupdate.version" value="1.23" />
+    <property name="libs.javaee-web-api-6.0.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/javaee-web-api-6.0.jar" />
+    <property name="libs.hibernate-support.maven-pom" value="" />
+    <property name="libs.hibernate-support.javadoc" value="" />
+    <property name="jdk.home" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home" />
+    <property name="libs.javac-api.src" value="" />
+    <property name="xml.module.install.dir" value="/Applications/netbeans.app/Contents/Resources/netbeans/soa/modules" />
+    <property name="sun.os.patch.level" value="unknown" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="libs.Encoder-Custom.javadoc" value="" />
+    <property name="nb.show.statistics.ui" value="usageStatisticsEnabled" />
+    <property name="netbeans.autoupdate.variant" value="" />
+    <property name="have.tests" value="true" />
+    <property name="org.xml.sax.driver" value="com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser" />
+    <property name="j2ee.server.instance" value="[/Users/ale/OpenESB-v2.3.1/glassfish]deployer:Sun:AppServer::localhost:4848" />
+    <property name="netbeans.derby.system.home" value="/Users/ale/OpenESB-v2.3.1/glassfish/databases" />
+    <property name="libs.javac-api.javadoc" value="" />
+    <property name="os.name" value="Mac OS X" />
+    <property name="esb.netbeans.platform" value="/Applications/netbeans.app/Contents/Resources/netbeans/platform" />
+    <property name="libs.beans-binding.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/beansbinding-1.2.1.jar" />
+    <property name="libs.javaee-endorsed-api-7.0.maven-pom" value="" />
+    <property name="libs.restapi.javadoc" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/docs/jsr311-api-1.1.1-javadoc.zip" />
+    <property name="libs.JWSAntTasks.maven-pom" value="" />
+    <property name="libs.testng.src" value="" />
+    <property name="libs.spring-webmvc3.0.src" value="" />
+    <property name="libs.restapi.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/rest/jsr311-api-1.1.1.jar" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+    <property name="libs.jaxb.maven-pom" value="" />
+    <property name="os.arch" value="x86_64" />
+    <property name="libs.Encoder-Custom.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/soa/modules/ext/custom.jar:/Applications/netbeans.app/Contents/Resources/netbeans/soa/modules/ext/customencoder-xsdextension.jar" />
+    <property name="libs.eclipselink.src" value="" />
+    <property name="user.name" value="ale" />
+    <property name="libs.jsf12.javadoc" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="libs.spring-webmvc3.0.maven-pom" value="" />
+    <property name="libs.swing-layout.maven-pom" value="" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner org.netbeans.modules.compapp.catd.ConfiguredTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/ale/Documents/Computer Science and Networking/ASE - Advanced Software Engineering/homeworks/hw_04/consegna/WhatsTheAirportCA/test/results/TEST-org.netbeans.modules.compapp.catd.ConfiguredTest.xml crashfile=/var/folders/d4/gfdm2nx50n18z5t5c33t_nsw0000gn/T/junitvmwatcher5892710291916075478.properties propsfile=/var/folders/d4/gfdm2nx50n18z5t5c33t_nsw0000gn/T/junit2554592527798201571.properties" />
+    <property name="build.classes.dir" value="build/jar" />
+    <property name="enterprise.module.install.dir" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules" />
+    <property name="libs.javaee-endorsed-api-7.0.javadoc" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="libs.jaxws21.javadoc" value="/Applications/netbeans.app/Contents/Resources/netbeans/java/docs/jaxws-api-doc.zip" />
+    <property name="user.country" value="US" />
+    <property name="libs.jstl11.javadoc" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="libs.jsp-compilation-syscp.src" value="" />
+    <property name="libs.JAVADB_DRIVER_LABEL.src" value="" />
+    <property name="meta.inf" value="src/conf" />
+    <property name="netbeans.system_http_non_proxy_hosts" value="" />
+    <property name="ServerPassword" value="adminadmin" />
+    <property name="netbeans.home" value="/Applications/netbeans.app/Contents/Resources/netbeans/platform" />
+    <property name="build.compiler.emacs" value="true" />
+    <property name="libs.javaee-web-api-6.0.src" value="" />
+    <property name="libs.ejb3-persistence.src" value="" />
+    <property name="libs.jsp-compilation-syscp.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/java/ant/lib/ant.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/servlet3.1-jsp2.3-api.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/glassfish-jspparser-4.0.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/standard.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/jsf-2_2/javax.faces.jar" />
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/endorsed" />
+    <property name="netbeans.dynamic.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/platform/core/core.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/core/org-openide-filesystems.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/core/locale/core_ja.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/core/locale/core_pt_BR.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/core/locale/core_ru.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/core/locale/core_zh_CN.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/core/locale/org-openide-filesystems_ja.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/core/locale/org-openide-filesystems_pt_BR.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/core/locale/org-openide-filesystems_ru.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/core/locale/org-openide-filesystems_zh_CN.jar:/Applications/netbeans.app/Contents/MacOS/../Resources/netbeans/bin/../soa/core/locale/core_soa.jar:/Applications/netbeans.app/Contents/MacOS/../Resources/netbeans/bin/../nb/core/org-netbeans-upgrader.jar:/Applications/netbeans.app/Contents/MacOS/../Resources/netbeans/bin/../nb/core/locale/core_nb.jar:/Applications/netbeans.app/Contents/MacOS/../Resources/netbeans/bin/../nb/core/locale/org-netbeans-upgrader_ja.jar:/Applications/netbeans.app/Contents/MacOS/../Resources/netbeans/bin/../nb/core/locale/org-netbeans-upgrader_pt_BR.jar:/Applications/netbeans.app/Contents/MacOS/../Resources/netbeans/bin/../nb/core/locale/org-netbeans-upgrader_ru.jar:/Applications/netbeans.app/Contents/MacOS/../Resources/netbeans/bin/../nb/core/locale/org-netbeans-upgrader_zh_CN.jar" />
+    <property name="java.vm.specification.version" value="1.7" />
+    <property name="libs.primefaces.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/primefaces/primefaces-3.5.jar" />
+    <property name="libs.javaee-api-6.0.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/javaee-api-6.0.jar" />
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="netbeans.productversion" value="OpenESB IDE 2.3.1" />
+    <property name="java.awt.headless" value="${java.awt.headless}" />
+    <property name="libs.hibernate-persistence.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/antlr-2.7.6.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/asm.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/asm-attrs.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/cglib-2.1.3.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/commons-collections-2.1.1.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-apache-commons-logging.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/dom4j-1.6.1.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/ehcache-1.2.3.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/jdbc2_0-stdext.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/jta.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/hibernate3.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/hibernate-tools.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/hibernate-annotations.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/hibernate-commons-annotations.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/hibernate-entitymanager.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/javassist.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/ejb3-persistence.jar" />
+    <property name="libs.jaxws21.src" value="" />
+    <property name="netbeans.autoupdate.language" value="en" />
+    <property name="org.netbeans.core.startup.specialResource" value="nullcom.sun.jdo.api.persistence.mapping.ejb" />
+    <property name="libs.Encoder-Framework.javadoc" value="" />
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="libs.javaee-api-6.0.javadoc" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="sun.font.fontmanager" value="sun.font.CFontManager" />
+    <property name="file.separator" value="/" />
+    <property name="libs.junit_4.maven-pom" value="" />
+    <property name="netbeans.buildnumber" value="201306052037" />
+    <property name="libs.JWSAntTasks.javadoc" value="" />
+    <property name="libs.eclipselinkmodelgen.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.jpa.modelgen_2.5.0.v20130507-3faac2b.jar" />
+    <property name="libs.javaee-endorsed-api-7.0.src" value="" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="libs.junit.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/junit-3.8.2.jar" />
+    <property name="libs.jaxb.javadoc" value="/Applications/netbeans.app/Contents/Resources/netbeans/ide/docs/jaxb-api-doc.zip" />
+    <property name="libs.struts.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/struts/antlr-2.7.2.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/struts/bsf-2.3.0.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/struts/commons-beanutils-1.8.0.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/struts/commons-chain-1.2.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/struts/commons-digester-1.8.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/struts/commons-fileupload-1.1.1.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/struts/commons-io-1.1.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/struts/commons-logging-1.0.4.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/struts/commons-validator-1.3.1.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/struts/jstl-1.0.2.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/struts/oro-2.0.8.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/struts/standard-1.0.6.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/struts/struts-core-1.3.10.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/struts/struts-el-1.3.10.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/struts/struts-extras-1.3.10.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/struts/struts-faces-1.3.10.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/struts/struts-mailreader-dao-1.3.10.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/struts/struts-scripting-1.3.10.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/struts/struts-taglib-1.3.10.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/struts/struts-tiles-1.3.10.jar" />
+    <property name="ant.home" value="/Applications/netbeans.app/Contents/Resources/netbeans/java/ant" />
+    <property name="libs.junit_4.src" value="/Applications/netbeans.app/Contents/Resources/netbeans/java/docs/junit-4.10-sources.jar" />
+    <property name="libs.testng.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/platform/modules/ext/testng-6.5.1-dist.jar" />
+    <property name="libs.absolutelayout.maven-pom" value="" />
+    <property name="ant.java.version" value="1.7" />
+    <property name="java.library.path" value="/Users/ale/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:." />
+    <property name="libs.metro.maven-pom" value="" />
+    <property name="libs.Encoder-HL7.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/soa/modules/ext/hl7.jar:/Applications/netbeans.app/Contents/Resources/netbeans/soa/modules/ext/hl7encoder-xsdextension.jar" />
+    <property name="java.util.logging.config.class" value="org.netbeans.core.startup.TopLogging" />
+    <property name="libs.PostgreSQLDriver.src" value="" />
+    <property name="resource.WhatsTheAirport" value="../WhatsTheAirport/setup" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="basedir" value="/Users/ale/Documents/Computer Science and Networking/ASE - Advanced Software Engineering/homeworks/hw_04/consegna/WhatsTheAirportCA" />
+    <property name="libs.jpa20-persistence.maven-pom" value="" />
+    <property name="libs.javaee-web-api-7.0.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/javaee-web-api-7.0.jar" />
+    <property name="libs.jstl11.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/standard.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/jstl.jar" />
+    <property name="path.separator" value=":" />
+    <property name="libs.javaee-web-api-6.0.javadoc" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="ant.junit.enabletestlistenerevents" value="true" />
+    <property name="sun.io.unicode.encoding" value="UnicodeBig" />
+    <property name="libs.jaxws21.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/ext/jaxb/jaxb-impl.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/ext/jaxb/jaxb-xjc.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/jaxws22/FastInfoset.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/jaxws22/gmbal-api-only.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/jaxws22/ha-api.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/jaxws22/javax.mail_1.4.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/jaxws22/jaxws-rt.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/jaxws22/jaxws-tools.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/jaxws22/management-api.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/jaxws22/mimepull.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/jaxws22/policy.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/jaxws22/saaj-impl.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/jaxws22/stax-ex.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/jaxws22/stax2-api.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/jaxws22/streambuffer.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/jaxws22/woodstox-core-asl.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/jaxws22/api/jaxws-api.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/jaxws22/api/jsr181-api.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/jaxws22/api/javax.annotation.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/jaxws22/api/saaj-api.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/ext/jaxb/activation.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/ext/jaxb/api/jaxb-api.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/ext/jaxb/api/jsr173_1.0_api.jar" />
+    <property name="libs.struts.src" value="" />
+    <property name="user.language" value="en" />
+    <property name="libs.Encoder-Framework.src" value="" />
+    <property name="libs.JAXB-ENDORSED.maven-pom" value="" />
+    <property name="ant.file." value="/Users/ale/Documents/Computer Science and Networking/ASE - Advanced Software Engineering/homeworks/hw_04/consegna/WhatsTheAirportCA/build.xml" />
+    <property name="libs.spring-framework.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-apache-commons-logging.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/cglib-2.2.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/spring/spring-2.5.6.SEC03.jar" />
+    <property name="libs.eclipselink.maven-pom" value="" />
+    <property name="libs.primefaces.javadoc" value="" />
+    <property name="libs.spring-framework300.maven-pom" value="" />
+    <property name="ant.project.invoked-targets" value="test" />
+    <property name="libs.Encoder-Framework.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/soa/modules/ext/encoderframework.jar:/Applications/netbeans.app/Contents/Resources/netbeans/soa/modules/ext/encoderfrmwk-xsdextension.jar:/Applications/netbeans.app/Contents/Resources/netbeans/soa/modules/ext/xbean.jar" />
+    <property name="libs.swing-layout.javadoc" value="/Applications/netbeans.app/Contents/Resources/netbeans/platform/docs/swing-layout-1.0.4-doc.zip" />
+    <property name="sun.java2d.d3d" value="false" />
+    <property name="libs.ejb3-persistence.maven-pom" value="" />
+    <property name="gopherProxySet" value="false" />
+    <property name="libs.PostgreSQLDriver.maven-pom" value="" />
+    <property name="java.class.version" value="51.0" />
+    <property name="libs.JAVADB_DRIVER_LABEL.classpath" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/db/lib/derby.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/db/lib/derbyclient.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/db/lib/derbynet.jar" />
+    <property name="libs.javaee-endorsed-api-6.0.src" value="" />
+    <property name="netbeans.system_http_proxy" value="DIRECT" />
+    <property name="libs.eclipselink.javadoc" value="" />
+    <property name="libs.jsp-compilation.maven-pom" value="" />
+    <property name="user.properties.file" value="/Users/ale/Library/Application Support/OpenESB_IDE/2.3.1/build.properties" />
+    <property name="libs.spring-framework.src" value="" />
+    <property name="libs.javac-api.maven-pom" value="" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="libs.JAXB-ENDORSED.javadoc" value="" />
+    <property name="libs.JWSAntTasks.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/java/ant/extra/org-netbeans-modules-javawebstart-anttasks.jar" />
+    <property name="libs.spring-framework300.src" value="" />
+    <property name="libs.PojoSELib.src" value="/Applications/netbeans.app/Contents/Resources/netbeans/soa/modules/ext/sun-pojo-engine-api-src.jar" />
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="libs.jpa20-persistence.javadoc" value="" />
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre" />
+    <property name="libs.jsp-compilation.src" value="" />
+    <property name="libs.spring-webmvc.src" value="" />
+    <property name="libs.javaee-endorsed-api-6.0.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/javaee6-endorsed/javax.annotation.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/javaee6-endorsed/jaxb-api-osgi.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/javaee6-endorsed/webservices-api-osgi.jar" />
+    <property name="libs.javaee-api-6.0.src" value="" />
+    <property name="ant.project.default-target" value="default" />
+    <property name="libs.PostgreSQLDriver.javadoc" value="" />
+    <property name="libs.restlib.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/rest/asm-3.1.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/rest/jackson-core-asl-1.9.2.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/rest/jackson-jaxrs-1.9.2.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/rest/jackson-mapper-asl-1.9.2.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/rest/jackson-xc-1.9.2.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/rest/jersey-apache-client-1.13.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/rest/jersey-atom-abdera-1.13.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/rest/jersey-client-1.13.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/rest/jersey-core-1.13.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/rest/jersey-guice-1.13.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/rest/jersey-json-1.13.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/rest/jersey-multipart-1.13.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/rest/jersey-server-1.13.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/rest/jersey-servlet-1.13.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/rest/jersey-simple-server-1.13.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/rest/jersey-spring-1.13.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/rest/jettison-1.1.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/rest/oauth-client-1.13.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/rest/oauth-server-1.13.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/rest/oauth-signature-1.13.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/ext/jaxb/activation.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/ext/jaxb/api/jaxb-api.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/ext/jaxb/api/jsr173_1.0_api.jar" />
+    <property name="jbi.service-unit.description" value="Represents this Service Unit" />
+    <property name="libs.MySQLDriver.maven-pom" value="" />
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="libs.junit_4.javadoc" value="/Applications/netbeans.app/Contents/Resources/netbeans/java/docs/junit-4.10-javadoc.jar" />
+    <property name="libs.spring-webmvc.javadoc" value="" />
+    <property name="test.results.dir" value="/Users/ale/Documents/Computer Science and Networking/ASE - Advanced Software Engineering/homeworks/hw_04/consegna/WhatsTheAirportCA/test/results" />
+    <property name="libs.javaee-web-api-6.0.maven-pom" value="" />
+    <property name="libs.hibernate-support.src" value="" />
+    <property name="jna.boot.library.name" value="jnidispatch-340" />
+    <property name="libs.javaee-endorsed-api-6.0.javadoc" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="libs.javaee-api-7.0.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/javaee-api-7.0.jar" />
+    <property name="sun.awt.datatransfer.timeout" value="1000" />
+    <property name="libs.PojoSELib.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/soa/modules/ext/sun-pojo-engine-api.jar:/Applications/netbeans.app/Contents/Resources/netbeans/soa/modules/ext/jbi.jar" />
+    <property name="ant.file.type." value="file" />
+    <property name="libs.spring-webmvc3.0.javadoc" value="" />
+    <property name="nb.native.filechooser" value="false" />
+    <property name="libs.restapi.src" value="" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="sun.java2d.noddraw" value="true" />
+    <property name="libs.jsp-compiler.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/ant/extra/jspcompile.jar" />
+    <property name="libs.spring-webmvc.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/spring/spring-webmvc-2.5.6.SEC03.jar" />
+    <property name="ant.file" value="/Users/ale/Documents/Computer Science and Networking/ASE - Advanced Software Engineering/homeworks/hw_04/consegna/WhatsTheAirportCA/build.xml" />
+    <property name="libs.beans-binding.maven-pom" value="" />
+    <property name="com.sun.jbi.routing.bc.autoconnect" value="true" />
+    <property name="libs.jsf12.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/jsf-1_2/commons-beanutils.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/jsf-1_2/commons-collections.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/jsf-1_2/commons-digester.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/jsf-1_2/commons-logging.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/jsf-1_2/jsf-api.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/jsf-1_2/jsf-impl.jar" />
+    <property name="libs.Encoder-HL7.src" value="" />
+    <property name="GenerateATSOutput" value="${generate.ats.output}" />
+    <property name="libs.restapi.maven-pom" value="" />
+    <property name="no.catd.context" value="true" />
+    <property name="libs.beans-binding.src" value="" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="libs.swing-layout.src" value="/Applications/netbeans.app/Contents/Resources/netbeans/platform/docs/swing-layout-1.0.4-src.zip" />
+    <property name="org.openide.major.version" value="IDE/1" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="libs.Encoder-Custom.maven-pom" value="" />
+    <property name="netbeans.user" value="/Users/ale/Library/Application Support/OpenESB_IDE/2.3.1" />
+    <property name="java.io.tmpdir" value="/var/folders/d4/gfdm2nx50n18z5t5c33t_nsw0000gn/T/" />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="libs.jsp-compiler.src" value="" />
+    <property name="libs.Encoder-COCO.src" value="" />
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib" />
+    <property name="libs.jsf20.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/jsf-2_2/javax.faces.jar" />
+    <property name="src.build.dir" value="src/jbiServiceUnits" />
+    <property name="dist.jar" value="dist/WhatsTheAirportCA.zip" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="ant.project.name" value="" />
+    <property name="libs.PojoSELib.javadoc" value="/Applications/netbeans.app/Contents/Resources/netbeans/soa/modules/ext/sun-pojo-engine-api-javadoc.jar" />
+    <property name="netbeans.hash.code" value="unique=NB_GLASSFISH0322d315e-785d-409b-a7f4-12c14d0915de" />
+    <property name="libs.jsp-compilation-syscp.maven-pom" value="" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="libs.CopyLibs.javadoc" value="" />
+    <property name="org.openide.specification.version" value="6.2" />
+    <property name="libs.hibernate-support.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/antlr-2.7.6.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/asm.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/asm-attrs.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/cglib-2.1.3.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/commons-collections-2.1.1.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-apache-commons-logging.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/dom4j-1.6.1.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/ehcache-1.2.3.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/jdbc2_0-stdext.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/jta.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/hibernate3.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/hibernate-tools.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/hibernate-annotations.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/hibernate-commons-annotations.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/hibernate-entitymanager.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/javassist.jar" />
+    <property name="user.home" value="/Users/ale" />
+    <property name="libs.primefaces.maven-pom" value="" />
+    <property name="com.sun.jbi.routing" value="true" />
+    <property name="libs.javaee-api-6.0.maven-pom" value="" />
+    <property name="libs.JWSAntTasks.src" value="" />
+    <property name="libs.CopyLibs.maven-pom" value="" />
+    <property name="libs.spring-framework300.javadoc" value="" />
+    <property name="libs.hibernate-persistence.maven-pom" value="" />
+    <property name="libs.absolutelayout.javadoc" value="" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="libs.Encoder-COCO.maven-pom" value="" />
+    <property name="ide.module.install.dir" value="/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="libs.javac-api.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/nb-javac-api.jar" />
+    <property name="java.version" value="1.7.0_80" />
+    <property name="libs.MySQLDriver.javadoc" value="" />
+    <property name="org.openide.version" value="deprecated" />
+    <property name="source.encoding" value="UTF-8" />
+    <property name="libs.eclipselinkmodelgen.maven-pom" value="" />
+    <property name="libs.jsp-compilation-syscp.javadoc" value="" />
+    <property name="server.password" value="adminadmin" />
+    <property name="libs.junit.maven-pom" value="" />
+    <property name="libs.eclipselinkmodelgen.javadoc" value="" />
+    <property name="libs.javaee-endorsed-api-7.0.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/javaee7-endorsed/javax.annotation-api.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/javaee7-endorsed/javax.xml.soap-api.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/javaee7-endorsed/jaxb-api-osgi.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/javaee7-endorsed/jaxws-api.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/javaee7-endorsed/jsr181-api.jar" />
+    <property name="libs.metro.javadoc" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/docs/metro-1.4-doc.zip" />
+    <property name="libs.struts.maven-pom" value="" />
+    <property name="libs.testng.maven-pom" value="" />
+    <property name="NetBeansUserDir" value="/Users/ale/Library/Application Support/OpenESB_IDE/2.3.1" />
+    <property name="test.dir" value="test" />
+    <property name="libs.jaxb.src" value="" />
+    <property name="libs.Encoder-HL7.maven-pom" value="" />
+    <property name="libs.jaxb.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/ext/jaxb/jaxb-impl.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/ext/jaxb/jaxb-xjc.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/ext/jaxb/jaxb1-impl.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/ext/jaxb/activation.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/ext/jaxb/api/jaxb-api.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/ext/jaxb/api/jsr173_1.0_api.jar" />
+    <property name="libs.swing-layout.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/platform/modules/ext/swing-layout-1.0.4.jar" />
+    <property name="libs.spring-webmvc3.0.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/spring-3.0/spring-webmvc-3.1.1.RELEASE.jar" />
+    <property name="libs.javaee-web-api-7.0.maven-pom" value="" />
+    <property name="libs.restlib.src" value="" />
+    <property name="build.generated.dir" value="build/generated" />
+    <property name="libs.hibernate-persistence.src" value="" />
+    <property name="line.separator" value="&#xa;" />
+    <property name="java.specification.version" value="1.7" />
+    <property name="libs.jaxws21.maven-pom" value="" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="nb.registration.enabled" value="false" />
+    <property name="user.country.format" value="IT" />
+    <property name="libs.spring-framework.maven-pom" value="" />
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/classes" />
+    <property name="src.dir" value="src/jbiasa" />
+    <property name="libs.Encoder-Framework.maven-pom" value="" />
+    <property name="libs.jsf20.src" value="" />
+    <property name="libs.jpa20-persistence.src" value="" />
+    <property name="libs.jsf12.src" value="" />
+    <property name="libs.JAVADB_DRIVER_LABEL.maven-pom" value="" />
+    <property name="libs.struts.javadoc" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/docs/struts-1.3.10-javadoc.zip" />
+    <property name="libs.javaee-web-api-7.0.src" value="" />
+    <property name="libs.primefaces.src" value="" />
+    <property name="dist.dir" value="dist" />
+    <property name="org.netbeans.modules.compapp.catd.context" value="" />
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob" />
+    <property name="default.javac.source" value="1.7" />
+    <property name="libs.MySQLDriver.src" value="" />
+    <property name="sun.jnu.encoding" value="UTF-8" />
+    <property name="jbi.service-assembly.id" value="WhatsTheAirportCA" />
+    <property name="libs.Encoder-COCO.javadoc" value="" />
+    <property name="java.runtime.version" value="1.7.0_80-b15" />
+    <property name="libs.ejb3-persistence.javadoc" value="" />
+    <property name="jna.platform.library.path" value="/usr/lib:/usr/lib" />
+    <property name="jbi.service-assembly.description" value="Represents the Service Assembly of WhatsTheAirportCA" />
+    <property name="default.javac.target" value="1.7" />
+    <property name="libs.junit_4.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/platform/modules/ext/junit-4.10.jar" />
+    <property name="user.timezone" value="" />
+    <property name="ant.file.type.WhatsTheAirportCA-jbi-impl" value="file" />
+    <property name="reference.WhatsTheAirport.dist_se" value="../WhatsTheAirport/build/SEDeployment.jar" />
+    <property name="java.module.install.dir" value="/Applications/netbeans.app/Contents/Resources/netbeans/java/modules" />
+    <property name="libs.JAVADB_DRIVER_LABEL.javadoc" value="" />
+    <property name="libs.javaee-endorsed-api-6.0.maven-pom" value="" />
+    <property name="netbeans.dirs" value="/Applications/netbeans.app/Contents/MacOS/../Resources/netbeans/bin/../soa:/Applications/netbeans.app/Contents/MacOS/../Resources/netbeans/bin/../apisupport:/Applications/netbeans.app/Contents/MacOS/../Resources/netbeans/bin/../enterprise:/Applications/netbeans.app/Contents/MacOS/../Resources/netbeans/bin/../ergonomics:/Applications/netbeans.app/Contents/MacOS/../Resources/netbeans/bin/../harness:/Applications/netbeans.app/Contents/MacOS/../Resources/netbeans/bin/../ide:/Applications/netbeans.app/Contents/MacOS/../Resources/netbeans/bin/../java:/Applications/netbeans.app/Contents/MacOS/../Resources/netbeans/bin/../nb:/Applications/netbeans.app/Contents/MacOS/../Resources/netbeans/bin/../profiler:/Applications/netbeans.app/Contents/MacOS/../Resources/netbeans/bin/../webcommon:/Applications/netbeans.app/Contents/MacOS/../Resources/netbeans/bin/../websvccommon:" />
+    <property name="libs.jsf20.javadoc" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="java.ext.dirs" value="/Users/ale/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
+    <property name="libs.metro.src" value="" />
+    <property name="libs.absolutelayout.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/AbsoluteLayout.jar" />
+    <property name="libs.metro.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/ext/jaxb/activation.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/metro/webservices-api.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/metro/webservices-extra-api.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/metro/webservices-extra.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/metro/webservices-rt.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/metro/webservices-tools.jar" />
+    <property name="libs.restlib.maven-pom" value="" />
+    <property name="apple.laf.useScreenMenuBar" value="true" />
+    <property name="jbi.content.component" value="sun-bpel-engine" />
+    <property name="java.class.path" value="/Applications/netbeans.app/Contents/Resources/netbeans/soa/modules/org-netbeans-modules-compapp-manager-jbi.jar:/Applications/netbeans.app/Contents/Resources/netbeans/soa/modules/org-netbeans-modules-compapp-projects-jbi.jar:/Applications/netbeans.app/Contents/Resources/netbeans/soa/modules/ext/jbi-admin-common.jar:/Applications/netbeans.app/Contents/Resources/netbeans/soa/modules/ext/catd.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/junit-3.8.2.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/jaxws22/api/saaj-api.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/jaxws22/saaj-impl.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/jaxws22/FastInfoset.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-editor-lib.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-editor.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-editor-deprecated-pre65formatting.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-editor-util.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-editor-lib2.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-editor-indent.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-editor-plain.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-editor-plain-lib.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-editor-settings.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-editor-settings-storage.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-lexer.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-xml-core.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-xml-lexer.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-xml-text.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-xml-xdm.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-xml-xam.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-csl-api.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/ext/jaxb/activation.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/lib/org-openide-modules.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/lib/org-openide-util.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/lib/org-openide-util-lookup.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/modules/org-openide-awt.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/modules/org-openide-options.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/modules/org-openide-text.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/modules/org-openide-loaders.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/modules/org-openide-nodes.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/modules/org-netbeans-modules-editor-mimelookup.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/modules/org-netbeans-modules-editor-mimelookup-impl.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/core/org-openide-filesystems.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/modules/org-netbeans-modules-keyring.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/modules/org-openide-dialogs.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/ant/lib/ant-launcher.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/ant/lib/ant.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/ant/lib/ant-junit.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/ant/lib/ant-junit4.jar" />
+    <property name="libs.absolutelayout.src" value="" />
+    <property name="libs.jpa20-persistence.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/eclipselink/javax.persistence_2.1.0.v201304241213.jar" />
+    <property name="os.version" value="10.12.6" />
+    <property name="libs.javaee-api-7.0.maven-pom" value="" />
+    <property name="project.WhatsTheAirport" value="../WhatsTheAirport" />
+    <property name="sun.awt.enableExtraMouseButtons" value="true" />
+    <property name="libs.PojoSELib.maven-pom" value="" />
+    <property name="libs.restlib.javadoc" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/docs/jersey-1.13-javadoc.zip:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/docs/jersey-apache-client-1.13-javadoc.zip:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/docs/jersey-atom-abdera-1.13-javadoc.zip:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/docs/jersey-guice-1.13-javadoc.zip:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/docs/jersey-multipart-1.13-javadoc.zip:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/docs/jersey-simple-server-1.13-javadoc.zip:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/docs/jersey-spring-1.13-javadoc.zip:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/docs/oauth-client-1.13-javadoc.zip:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/docs/oauth-server-1.13-javadoc.zip:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/docs/oauth-signature-1.13-javadoc.zip" />
+    <property name="libs.JAXB-ENDORSED.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/ext/jaxb/api/jaxb-api.jar" />
+    <property name="libs.javaee-api-7.0.javadoc" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/docs/javaee-doc-api.jar" />
+    <property name="libs.eclipselink.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/eclipselink/eclipselink.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/eclipselink/javax.persistence_2.1.0.v201304241213.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/eclipselink/org.eclipse.persistence.jpa.jpql_2.5.0.v20130507-3faac2b.jar" />
+    <property name="libs.beans-binding.javadoc" value="/Applications/netbeans.app/Contents/Resources/netbeans/java/docs/beansbinding-1.2.1-doc.zip" />
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="libs.CopyLibs.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/java/ant/extra/org-netbeans-modules-java-j2seproject-copylibstask.jar" />
+    <property name="libs.spring-framework300.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-apache-commons-logging.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/cglib-2.2.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/spring-3.0/spring-aop-3.1.1.RELEASE.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/spring-3.0/spring-asm-3.1.1.RELEASE.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/spring-3.0/spring-aspects-3.1.1.RELEASE.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/spring-3.0/spring-beans-3.1.1.RELEASE.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/spring-3.0/spring-context-3.1.1.RELEASE.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/spring-3.0/spring-context-support-3.1.1.RELEASE.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/spring-3.0/spring-core-3.1.1.RELEASE.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/spring-3.0/spring-expression-3.1.1.RELEASE.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/spring-3.0/spring-instrument-3.1.1.RELEASE.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/spring-3.0/spring-instrument-tomcat-3.1.1.RELEASE.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/spring-3.0/spring-jdbc-3.1.1.RELEASE.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/spring-3.0/spring-jms-3.1.1.RELEASE.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/spring-3.0/spring-orm-3.1.1.RELEASE.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/spring-3.0/spring-oxm-3.1.1.RELEASE.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/spring-3.0/spring-test-3.1.1.RELEASE.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/spring-3.0/spring-tx-3.1.1.RELEASE.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/spring-3.0/spring-web-3.1.1.RELEASE.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/spring-3.0/spring-webmvc-portlet-3.1.1.RELEASE.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/spring-3.0/spring-webmvc-3.1.1.RELEASE.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/spring-3.0/spring-struts-3.1.1.RELEASE.jar" />
+    <property name="libs.jsp-compiler.maven-pom" value="" />
+    <property name="libs.Encoder-COCO.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/soa/modules/ext/coco.jar:/Applications/netbeans.app/Contents/Resources/netbeans/soa/modules/ext/cocoencoder-xsdextension.jar" />
+    <property name="libs.spring-webmvc.maven-pom" value="" />
+    <property name="libs.ejb3-persistence.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/hibernate/ejb3-persistence.jar" />
+    <property name="libs.JAXB-ENDORSED.src" value="" />
+    <property name="libs.spring-framework.javadoc" value="" />
+    <property name="libs.testng.javadoc" value="/Applications/netbeans.app/Contents/Resources/netbeans/platform/docs/testng-6.5.1-javadoc.zip" />
+    <property name="libs.PostgreSQLDriver.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/ext/postgresql-9.2-1002.jdbc4.jar" />
+    <property name="libs.jsf12.maven-pom" value="" />
+    <property name="soa.module.install.dir" value="/Applications/netbeans.app/Contents/Resources/netbeans/soa/modules" />
+    <property name="libs.junit.src" value="" />
+    <property name="libs.Encoder-Custom.src" value="" />
+    <property name="build.dir" value="build" />
+    <property name="libs.CopyLibs.src" value="" />
+    <property name="libs.jsp-compilation.classpath" value="/Applications/netbeans.app/Contents/Resources/netbeans/java/ant/lib/ant.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/servlet3.1-jsp2.3-api.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/glassfish-jspparser-4.0.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/jsf-2_2/javax.faces.jar:/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/modules/ext/jstl.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/ant/lib/ant-launcher.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.8.4 compiled on May 22 2012" />
+    <property name="file.encoding" value="UTF-8" />
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
+    <property name="libs.javaee-web-api-7.0.javadoc" value="/Applications/netbeans.app/Contents/Resources/netbeans/enterprise/docs/javaee-doc-api.jar" />
+  </properties>
+  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestCaseAHO" time="2.352" />
+  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestCaseDUB" time="0.422" />
+  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestCaseFirstFault" time="0.255" />
+  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestCasePSA" time="0.414" />
+  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestCaseSecondFault" time="0.41" />
+  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestCaseSecondFault1" time="0.443" />
+  <testcase classname="org.netbeans.modules.compapp.catd.ConfiguredTest" name="TestCaseSecondFault2" time="0.469" />
+  <system-out><![CDATA[GenerateATSOutput=${generate.ats.output}
+NetBeansUserDir=/Users/ale/Library/Application Support/OpenESB_IDE/2.3.1
+ServerPassword=adminadmin
+awt.toolkit=sun.lwawt.macosx.LWCToolkit
+file.encoding=UTF-8
+file.encoding.pkg=sun.io
+file.separator=/
+ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16
+gopherProxySet=false
+http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16
+java.awt.graphicsenv=sun.awt.CGraphicsEnvironment
+java.awt.headless=${java.awt.headless}
+java.awt.printerjob=sun.lwawt.macosx.CPrinterJob
+java.class.path=/Applications/netbeans.app/Contents/Resources/netbeans/soa/modules/org-netbeans-modules-compapp-manager-jbi.jar:/Applications/netbeans.app/Contents/Resources/netbeans/soa/modules/org-netbeans-modules-compapp-projects-jbi.jar:/Applications/netbeans.app/Contents/Resources/netbeans/soa/modules/ext/jbi-admin-common.jar:/Applications/netbeans.app/Contents/Resources/netbeans/soa/modules/ext/catd.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/junit-3.8.2.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/jaxws22/api/saaj-api.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/jaxws22/saaj-impl.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/modules/ext/jaxws22/FastInfoset.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-editor-lib.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-editor.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-editor-deprecated-pre65formatting.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-editor-util.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-editor-lib2.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-editor-indent.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-editor-plain.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-editor-plain-lib.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-editor-settings.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-editor-settings-storage.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-lexer.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-xml-core.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-xml-lexer.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-xml-text.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-xml-xdm.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-xml-xam.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/org-netbeans-modules-csl-api.jar:/Applications/netbeans.app/Contents/Resources/netbeans/ide/modules/ext/jaxb/activation.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/lib/org-openide-modules.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/lib/org-openide-util.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/lib/org-openide-util-lookup.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/modules/org-openide-awt.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/modules/org-openide-options.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/modules/org-openide-text.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/modules/org-openide-loaders.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/modules/org-openide-nodes.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/modules/org-netbeans-modules-editor-mimelookup.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/modules/org-netbeans-modules-editor-mimelookup-impl.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/core/org-openide-filesystems.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/modules/org-netbeans-modules-keyring.jar:/Applications/netbeans.app/Contents/Resources/netbeans/platform/modules/org-openide-dialogs.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/ant/lib/ant-launcher.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/ant/lib/ant.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/ant/lib/ant-junit.jar:/Applications/netbeans.app/Contents/Resources/netbeans/java/ant/lib/ant-junit4.jar
+java.class.version=51.0
+java.endorsed.dirs=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/endorsed
+java.ext.dirs=/Users/ale/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre
+java.io.tmpdir=/var/folders/d4/gfdm2nx50n18z5t5c33t_nsw0000gn/T/
+java.library.path=/Users/ale/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+java.runtime.name=Java(TM) SE Runtime Environment
+java.runtime.version=1.7.0_80-b15
+java.specification.name=Java Platform API Specification
+java.specification.vendor=Oracle Corporation
+java.specification.version=1.7
+java.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+java.version=1.7.0_80
+java.vm.info=mixed mode
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+java.vm.specification.name=Java Virtual Machine Specification
+java.vm.specification.vendor=Oracle Corporation
+java.vm.specification.version=1.7
+java.vm.vendor=Oracle Corporation
+java.vm.version=24.80-b11
+line.separator=
+
+org.netbeans.modules.compapp.catd.context=
+os.arch=x86_64
+os.name=Mac OS X
+os.version=10.12.6
+path.separator=:
+socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16
+sun.arch.data.model=64
+sun.boot.class.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/classes
+sun.boot.library.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib
+sun.cpu.endian=little
+sun.cpu.isalist=
+sun.io.unicode.encoding=UnicodeBig
+sun.java.command=org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner org.netbeans.modules.compapp.catd.ConfiguredTest filtertrace=true haltOnError=false haltOnFailure=false showoutput=true outputtoformatters=true logfailedtests=true logtestlistenerevents=true formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/ale/Documents/Computer Science and Networking/ASE - Advanced Software Engineering/homeworks/hw_04/consegna/WhatsTheAirportCA/test/results/TEST-org.netbeans.modules.compapp.catd.ConfiguredTest.xml crashfile=/var/folders/d4/gfdm2nx50n18z5t5c33t_nsw0000gn/T/junitvmwatcher5892710291916075478.properties propsfile=/var/folders/d4/gfdm2nx50n18z5t5c33t_nsw0000gn/T/junit2554592527798201571.properties
+sun.java.launcher=SUN_STANDARD
+sun.jnu.encoding=UTF-8
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+sun.os.patch.level=unknown
+user.country=US
+user.country.format=IT
+user.dir=/Users/ale/Documents/Computer Science and Networking/ASE - Advanced Software Engineering/homeworks/hw_04/consegna/WhatsTheAirportCA
+user.home=/Users/ale
+user.language=en
+user.name=ale
+user.timezone=Europe/Rome
+Test TestCaseAHO\Concurrent.properties Passed. Threads count Success: <1> Error: <0> Not completed: <0>
+Test TestCaseDUB\Concurrent.properties Passed. Threads count Success: <1> Error: <0> Not completed: <0>
+Test TestCaseFirstFault\Concurrent.properties Passed. Threads count Success: <1> Error: <0> Not completed: <0>
+Test TestCasePSA\Concurrent.properties Passed. Threads count Success: <1> Error: <0> Not completed: <0>
+Test TestCaseSecondFault\Concurrent.properties Passed. Threads count Success: <1> Error: <0> Not completed: <0>
+Test TestCaseSecondFault1\Concurrent.properties Passed. Threads count Success: <1> Error: <0> Not completed: <0>
+Test TestCaseSecondFault2\Concurrent.properties Passed. Threads count Success: <1> Error: <0> Not completed: <0>
+]]></system-out>
+  <system-err><![CDATA[Nov 09, 2017 5:35:56 PM org.netbeans.modules.editor.settings.storage.keybindings.KeyMapsStorage$KeyMapsReader startElement
+WARNING: The keybinding 'A-MOUSE_WHEEL_UP' in Editors/Keybindings/NetBeans/Defaults/org-netbeans-modules-editor-keybindings.xml may not work correctly on Mac. Keybindings starting with Alt or Ctrl should be coded with latin capital letters 'O' or 'D' respectively. For details see org.openide.util.Utilities.stringToKey().
+Nov 09, 2017 5:35:56 PM org.netbeans.modules.editor.settings.storage.keybindings.KeyMapsStorage$KeyMapsReader startElement
+WARNING: The keybinding 'A-MOUSE_WHEEL_DOWN' in Editors/Keybindings/NetBeans/Defaults/org-netbeans-modules-editor-keybindings.xml may not work correctly on Mac. Keybindings starting with Alt or Ctrl should be coded with latin capital letters 'O' or 'D' respectively. For details see org.openide.util.Utilities.stringToKey().
+]]></system-err>
+</testsuite>

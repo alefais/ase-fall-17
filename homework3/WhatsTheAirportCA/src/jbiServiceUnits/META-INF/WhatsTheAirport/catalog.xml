@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://www.webservicex.net/airport.asmx?WSDL" uri="../www.webservicex.net/airport.asmx.wsdl"/>
+    <system systemId="http://www.webservicex.net/country.asmx?wsdl" uri="../www.webservicex.net/country.asmx.wsdl"/>
+</catalog>

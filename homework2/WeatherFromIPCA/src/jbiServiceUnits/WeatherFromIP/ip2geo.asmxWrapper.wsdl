@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ip2geo.asmxWrapper" targetNamespace="http://enterprise.netbeans.org/bpel/ip2geo.asmxWrapper" xmlns:tns="http://enterprise.netbeans.org/bpel/ip2geo.asmxWrapper" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:ns="http://ws.cdyne.com/">
+    <import location="http://ws.cdyne.com/ip2geo/ip2geo.asmx?wsdl" namespace="http://ws.cdyne.com/"/>
+    <plnk:partnerLinkType name="IP2GeoSoapLinkType">
+        <plnk:role name="IP2GeoSoapRole" portType="ns:IP2GeoSoap"/>
+    </plnk:partnerLinkType>
+</definitions>

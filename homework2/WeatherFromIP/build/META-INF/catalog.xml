@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://ws.cdyne.com/ip2geo/ip2geo.asmx?wsdl" uri="../ws.cdyne.com/ip2geo/ip2geo.asmx.wsdl"/>
+    <system systemId="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/NMProperty" uri="src/_references/_relative/nbproject/private/retriever/www.oracle.com/sun/index.html"/>
+    <system systemId="http://ws.cdyne.com/" uri="src/_references/_relative/nbproject/private/retriever/ws.cdyne.com/index.xml"/>
+    <system systemId="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Attachment" uri="src/_references/_relative/nbproject/private/retriever/www.oracle.com/sun/index.html"/>
+    <system systemId="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2" uri="src/_references/_relative/nbproject/private/retriever/www.oracle.com/sun/index.html"/>
+    <system systemId="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/XPathFunctions" uri="src/_references/_relative/nbproject/private/retriever/www.oracle.com/sun/index.html"/>
+</catalog>

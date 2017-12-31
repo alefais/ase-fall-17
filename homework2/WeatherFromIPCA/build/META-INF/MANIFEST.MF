@@ -1,0 +1,4 @@
+Bundle-Name: WeatherFromIPCA
+Bundle-SymbolicName: WeatherFromIPCA
+Bundle-ManifestVersion: 2
+Bundle-Version: 1.0.0

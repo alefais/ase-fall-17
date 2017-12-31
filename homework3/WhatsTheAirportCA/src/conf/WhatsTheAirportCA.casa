@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<casa xmlns="http://java.sun.com/xml/ns/casa" xmlns:ns1="http://j2ee.netbeans.org/wsdl/WhatsTheAirport/src/WTAClientWSDL" xmlns:ns2="http://www.webserviceX.NET" xmlns:ns3="http://enterprise.netbeans.org/bpel/WhatsTheAirport/whatsTheAirport" xmlns:xlink="http://www.w3.org/2000/xlink">
+    <endpoints>
+        <endpoint endpoint-name="WTAClientWSDLPort" interface-name="ns1:WTAClientWSDLPortType" name="endpoint1" service-name="ns1:WTAClientWSDLService"/>
+        <endpoint endpoint-name="airportSoap12" interface-name="ns2:airportSoap" name="endpoint2" service-name="ns2:airport"/>
+        <endpoint endpoint-name="countrySoap12" interface-name="ns2:countrySoap" name="endpoint3" service-name="ns2:country"/>
+        <endpoint display-name="PartnerLink1" endpoint-name="WTAClientWSDLPortTypeRole_myRole" file-path="whatsTheAirport.bpel" interface-name="ns1:WTAClientWSDLPortType" name="endpoint4" process-name="whatsTheAirport" service-name="ns3:PartnerLink1"/>
+        <endpoint display-name="PartnerLink2" endpoint-name="airportSoapRole_partnerRole" file-path="whatsTheAirport.bpel" interface-name="ns2:airportSoap" name="endpoint5" process-name="whatsTheAirport" service-name="ns3:PartnerLink2"/>
+        <endpoint display-name="PartnerLink3" endpoint-name="countrySoapRole_partnerRole" file-path="whatsTheAirport.bpel" interface-name="ns2:countrySoap" name="endpoint6" process-name="whatsTheAirport" service-name="ns3:PartnerLink3"/>
+    </endpoints>
+    <service-units>
+        <service-engine-service-unit artifacts-zip="WhatsTheAirport.jar" component-name="sun-bpel-engine" defined="true" description="Represents this Service Unit" internal="true" name="WhatsTheAirportCA-WhatsTheAirport" unit-name="WhatsTheAirport" unknown="false" x="139" y="97">
+            <provides endpoint="endpoint4"/>
+            <consumes endpoint="endpoint5"/>
+            <consumes endpoint="endpoint6"/>
+        </service-engine-service-unit>
+        <binding-component-service-unit artifacts-zip="sun-http-binding.jar" component-name="sun-http-binding" description="Represents this Service Unit" name="WhatsTheAirportCA-sun-http-binding" unit-name="sun-http-binding">
+            <ports>
+                <port x="67" y="225">
+                    <link xlink:href="../jbiServiceUnits/WhatsTheAirport/WTAClientWSDL.wsdl#xpointer(/definitions/service[@name='WTAClientWSDLService']/port[@name='WTAClientWSDLPort'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint1"/>
+                    <provides endpoint="endpoint1"/>
+                </port>
+                <port bindingType="soap12" x="67" y="131">
+                    <link xlink:href="../jbiServiceUnits/WhatsTheAirport/www.webservicex.net/airport.asmx.wsdl#xpointer(/definitions/service[@name='airport']/port[@name='airportSoap12'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint2"/>
+                    <provides endpoint="endpoint2"/>
+                </port>
+                <port bindingType="soap12" x="67" y="37">
+                    <link xlink:href="../jbiServiceUnits/WhatsTheAirport/www.webservicex.net/country.asmx.wsdl#xpointer(/definitions/service[@name='country']/port[@name='countrySoap12'])" xlink:type="simple"/>
+                    <consumes endpoint="endpoint3"/>
+                    <provides endpoint="endpoint3"/>
+                </port>
+            </ports>
+        </binding-component-service-unit>
+    </service-units>
+    <connections>
+        <connection consumer="endpoint1" provider="endpoint4" state="unchanged"/>
+        <connection consumer="endpoint5" provider="endpoint2" state="new"/>
+        <connection consumer="endpoint6" provider="endpoint3" state="new"/>
+    </connections>
+    <porttypes>
+        <link xlink:href="../jbiServiceUnits/WhatsTheAirport/WTAClientWSDL.wsdl#xpointer(/definitions/portType[@name='WTAClientWSDLPortType'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WhatsTheAirport/www.webservicex.net/airport.asmx.wsdl#xpointer(/definitions/portType[@name='airportSoap'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WhatsTheAirport/www.webservicex.net/country.asmx.wsdl#xpointer(/definitions/portType[@name='countrySoap'])" xlink:type="simple"/>
+    </porttypes>
+    <bindings>
+        <link xlink:href="../jbiServiceUnits/WhatsTheAirport/WTAClientWSDL.wsdl#xpointer(/definitions/binding[@name='WTAClientWSDLBinding'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WhatsTheAirport/www.webservicex.net/airport.asmx.wsdl#xpointer(/definitions/binding[@name='airportSoap'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WhatsTheAirport/www.webservicex.net/airport.asmx.wsdl#xpointer(/definitions/binding[@name='airportSoap12'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WhatsTheAirport/www.webservicex.net/country.asmx.wsdl#xpointer(/definitions/binding[@name='countrySoap'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WhatsTheAirport/www.webservicex.net/country.asmx.wsdl#xpointer(/definitions/binding[@name='countrySoap12'])" xlink:type="simple"/>
+    </bindings>
+    <services>
+        <link xlink:href="../jbiServiceUnits/WhatsTheAirport/WTAClientWSDL.wsdl#xpointer(/definitions/service[@name='WTAClientWSDLService'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WhatsTheAirport/www.webservicex.net/airport.asmx.wsdl#xpointer(/definitions/service[@name='airport'])" xlink:type="simple"/>
+        <link xlink:href="../jbiServiceUnits/WhatsTheAirport/www.webservicex.net/country.asmx.wsdl#xpointer(/definitions/service[@name='country'])" xlink:type="simple"/>
+    </services>
+    <regions>
+        <region name="WSDL Endpoints" width="150"/>
+        <region name="JBI Modules" width="500"/>
+        <region name="External Modules" width="200"/>
+    </regions>
+</casa>

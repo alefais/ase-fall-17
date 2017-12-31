@@ -1,0 +1,66 @@
+tosca_definitions_version: tosca_simple_yaml_1_0
+
+description: TOSCA Yaml of Doodle App by !<Alessandra Fais>!
+
+repositories:
+  docker_hub: https://registry.hub.docker.com/
+
+imports:
+- tosker: https://di-unipi-socc.github.io/tosker-types/tosker.yaml
+
+topology_template:
+  inputs:
+    doodle_port:
+      type: integer
+      default: 8080
+      description: Doodle port
+  node_templates:
+    doodle:
+      type: tosker.nodes.Software
+      artifacts:
+        doodle_code: doodle.zip
+      requirements:
+      - host:
+          node_filter:
+            properties:
+            - ports:
+              - 8080: {get_input: doodle_port}
+            - supported_sw:
+              - mvn: 3.x
+              - java: 1.8.x
+          node: doodle_container
+      interfaces:
+        Standard:
+          create:
+            implementation: scripts/create_doodle.sh
+            inputs:
+              code: {get_artifact: [SELF, doodle_code]}
+          start:
+            implementation: scripts/start_doodle.sh
+          stop:
+            implementation: scripts/stop_doodle.sh
+          delete:
+            implementation: scripts/delete_doodle.sh
+    doodle_container:
+      properties:
+        os_distribution: Debian GNU/Linux 9 (stretch)
+        ports:
+          8080:
+            get_input: doodle_port
+        supported_sw:
+          curl: 7.52.1
+          erl: '2'
+          unzip: '6.00'
+          wget: '1.18'
+          java: 1.8.0
+          tar: '1.29'
+          nano: 2.7.4
+          mvn: 3.3.3
+          bash: 4.4.12
+          perl: 5.24.1
+      type: tosker.nodes.Container
+      artifacts:
+        my_image:
+          repository: docker_hub
+          file: frekele/maven:3.3.3-jdk8u51
+          type: tosker.artifacts.Image

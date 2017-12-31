@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process
+    name="whatsTheAirport"
+    targetNamespace="http://enterprise.netbeans.org/bpel/WhatsTheAirport/whatsTheAirport"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/WhatsTheAirport/whatsTheAirport"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2"
+    xmlns:sxat="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Attachment"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:ns0="http://www.webserviceX.NET" xmlns:ns1="http://j2ee.netbeans.org/wsdl/WhatsTheAirport/src/WTAClientWSDL">
+    <import namespace="http://j2ee.netbeans.org/wsdl/WhatsTheAirport/src/WTAClientWSDL" location="WTAClientWSDL.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://enterprise.netbeans.org/bpel/airport.asmxWrapper" location="airport.asmxWrapper.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://www.webserviceX.NET" location="http://www.webservicex.net/airport.asmx?WSDL" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://enterprise.netbeans.org/bpel/country.asmxWrapper" location="country.asmxWrapper.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://www.webserviceX.NET" location="http://www.webservicex.net/country.asmx?wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PartnerLink2" xmlns:tns="http://enterprise.netbeans.org/bpel/airport.asmxWrapper" partnerLinkType="tns:airportSoapLinkType" partnerRole="airportSoapRole"/>
+        <partnerLink name="PartnerLink3" xmlns:tns="http://enterprise.netbeans.org/bpel/country.asmxWrapper" partnerLinkType="tns:countrySoapLinkType" partnerRole="countrySoapRole"/>
+        <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/WhatsTheAirport/src/WTAClientWSDL" partnerLinkType="tns:WTAClientWSDL" myRole="WTAClientWSDLPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="UnknownCountry" messageType="ns1:WTAClientFault2"/>
+        <variable name="UnknownAirportCode" messageType="ns1:WTAClientFault1"/>
+        <variable name="GetGMTOutput" messageType="ns0:GetGMTbyCountrySoapOut"/>
+        <variable name="GetGMTInput" messageType="ns0:GetGMTbyCountrySoapIn"/>
+        <variable name="GetAirportInfoOutput" xmlns:tns="http://www.webserviceX.NET" messageType="tns:getAirportInformationByAirportCodeSoapOut"/>
+        <variable name="GetAirportInfoInput" xmlns:tns="http://www.webserviceX.NET" messageType="tns:getAirportInformationByAirportCodeSoapIn"/>
+        <variable name="OutputAirportInfo" xmlns:tns="http://j2ee.netbeans.org/wsdl/WhatsTheAirport/src/WTAClientWSDL" messageType="tns:WTAClientWSDLOperationResponse"/>
+        <variable name="InputAirportCode" xmlns:tns="http://j2ee.netbeans.org/wsdl/WhatsTheAirport/src/WTAClientWSDL" messageType="tns:WTAClientWSDLOperationRequest"/>
+    </variables>
+    <faultHandlers>
+        <catch faultName="ns1:EmptyInformationsString">
+            <sequence name="Sequence1">
+                <assign name="AssignFaultCode">
+                    <copy>
+                        <from>"The inserted code doesn't exist, it is not possible to retrieve informations about the airport."</from>
+                        <to variable="UnknownAirportCode" part="faultMessage"/>
+                    </copy>
+                </assign>
+                <reply name="ReplyWrongCode" partnerLink="PartnerLink1" operation="WTAClientWSDLOperation" portType="ns1:WTAClientWSDLPortType" faultName="ns1:EmptyInformationsString" variable="UnknownAirportCode"/>
+            </sequence>
+        </catch>
+        <catch faultName="ns1:UnknownCountry">
+            <sequence name="Sequence2">
+                <assign name="AssignFaultCountry">
+                    <copy>
+                        <from>"The country hasn't been recognized, it is not possible to retrieve informations about the time zone."</from>
+                        <to variable="UnknownCountry" part="faultMessage"/>
+                    </copy>
+                    <copy>
+                        <from>string($OutputAirportInfo.airportName)</from>
+                        <to variable="UnknownCountry" part="airportName"/>
+                    </copy>
+                    <copy>
+                        <from>string($GetGMTInput.parameters/ns0:CountryName)</from>
+                        <to variable="UnknownCountry" part="country"/>
+                    </copy>
+                </assign>
+                <reply name="ReplyUnknownCountry" partnerLink="PartnerLink1" operation="WTAClientWSDLOperation" portType="ns1:WTAClientWSDLPortType" faultName="ns1:UnknownCountry" variable="UnknownCountry"/>
+            </sequence>
+        </catch>
+    </faultHandlers>
+    <sequence>
+        <receive name="ReceiveAirportCode" createInstance="yes" partnerLink="PartnerLink1" operation="WTAClientWSDLOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/WhatsTheAirport/src/WTAClientWSDL" portType="tns:WTAClientWSDLPortType" variable="InputAirportCode"/>
+        <assign name="AssignInputCode">
+            <copy>
+                <from>string($InputAirportCode.airportCode)</from>
+                <to>$GetAirportInfoInput.parameters/ns0:airportCode</to>
+            </copy>
+        </assign>
+        <invoke name="InvokeAirportInfoByCode" partnerLink="PartnerLink2" operation="getAirportInformationByAirportCode" xmlns:tns="http://www.webserviceX.NET" portType="tns:airportSoap" inputVariable="GetAirportInfoInput" outputVariable="GetAirportInfoOutput"/>
+        <assign name="AssignAirportName">
+            <copy>
+                <from>substring-before(substring-after($GetAirportInfoOutput.parameters/ns0:getAirportInformationByAirportCodeResult, '&lt;CityOrAirportName&gt;'), '&lt;/CityOrAirportName&gt;')</from>
+                <to variable="OutputAirportInfo" part="airportName"/>
+            </copy>
+            <copy>
+                <from>substring-before(substring-after($GetAirportInfoOutput.parameters/ns0:getAirportInformationByAirportCodeResult, '&lt;Country&gt;'), '&lt;/Country&gt;')</from>
+                <to>$GetGMTInput.parameters/ns0:CountryName</to>
+            </copy>
+        </assign>
+        <if name="IfEmptyAirportInfo">
+            <condition>$GetGMTInput.parameters/ns0:CountryName = ''</condition>
+            <throw name="EmptyAirportInformations" faultName="ns1:EmptyInformationsString"/>
+        </if>
+        <invoke name="InvokeGMTByCountry" partnerLink="PartnerLink3" operation="GetGMTbyCountry" portType="ns0:countrySoap" inputVariable="GetGMTInput" outputVariable="GetGMTOutput"/>
+        <assign name="AssignGMT">
+            <copy>
+                <from>substring-before(substring-after($GetGMTOutput.parameters/ns0:GetGMTbyCountryResult, '&lt;GMT&gt;'), '&lt;/GMT&gt;')</from>
+                <to variable="OutputAirportInfo" part="timeZone"/>
+            </copy>
+        </assign>
+        <if name="IfUnknownCountry">
+            <condition>$OutputAirportInfo.timeZone = ''</condition>
+            <sequence name="Sequence3">
+                <if name="IfEmptyGMT">
+                    <condition>not(contains($GetGMTOutput.parameters/ns0:GetGMTbyCountryResult, '&lt;GMT /&gt;'))</condition>
+                    <throw name="UnknownCountry" faultName="ns1:UnknownCountry"/>
+                </if>
+            </sequence>
+        </if>
+        <reply name="ReplyAirportInfo" partnerLink="PartnerLink1" operation="WTAClientWSDLOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/WhatsTheAirport/src/WTAClientWSDL" portType="tns:WTAClientWSDLPortType" variable="OutputAirportInfo"/>
+    </sequence>
+</process>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<process
+    name="weatherFromIP"
+    targetNamespace="http://enterprise.netbeans.org/bpel/WeatherFromIP/weatherFromIP"
+    xmlns:tns="http://enterprise.netbeans.org/bpel/WeatherFromIP/weatherFromIP"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
+    xmlns:sxt="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Trace" 
+    xmlns:sxed="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Editor2"
+    xmlns:sxat="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/Attachment"
+    xmlns:sxeh="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/ErrorHandling" xmlns:ns0="http://ws.cdyne.com/" xmlns:sxnmp="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/NMProperty" xmlns:sxxf="http://www.sun.com/wsbpel/2.0/process/executable/SUNExtension/XPathFunctions">
+    <import namespace="http://j2ee.netbeans.org/wsdl/WeatherFromIP/src/OpenWeatherMapWDSL" location="OpenWeatherMapWDSL.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://j2ee.netbeans.org/wsdl/WeatherFromIP/src/ClientWSDL" location="ClientWSDL.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://enterprise.netbeans.org/bpel/ip2geo.asmxWrapper" location="ip2geo.asmxWrapper.wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <import namespace="http://ws.cdyne.com/" location="http://ws.cdyne.com/ip2geo/ip2geo.asmx?wsdl" importType="http://schemas.xmlsoap.org/wsdl/"/>
+    <partnerLinks>
+        <partnerLink name="PartnerLink3" xmlns:tns="http://enterprise.netbeans.org/bpel/ip2geo.asmxWrapper" partnerLinkType="tns:IP2GeoSoapLinkType" partnerRole="IP2GeoSoapRole"/>
+        <partnerLink name="PartnerLink2" xmlns:tns="http://j2ee.netbeans.org/wsdl/WeatherFromIP/src/ClientWSDL" partnerLinkType="tns:ClientWSDL" myRole="ClientWSDLPortTypeRole"/>
+        <partnerLink name="PartnerLink1" xmlns:tns="http://j2ee.netbeans.org/wsdl/WeatherFromIP/src/OpenWeatherMapWDSL" partnerLinkType="tns:RestOutboundWSDL" partnerRole="RestOutboundPortTypeRole"/>
+    </partnerLinks>
+    <variables>
+        <variable name="ClientOutWeather" xmlns:tns="http://j2ee.netbeans.org/wsdl/WeatherFromIP/src/ClientWSDL" messageType="tns:ClientWSDLOperationResponse"/>
+        <variable name="OWMOutput" xmlns:tns="http://j2ee.netbeans.org/wsdl/WeatherFromIP/src/OpenWeatherMapWDSL" messageType="tns:OpenWeatherGETResponse"/>
+        <variable name="OWMInput" xmlns:tns="http://j2ee.netbeans.org/wsdl/WeatherFromIP/src/OpenWeatherMapWDSL" messageType="tns:OpenWeatherGETRequest"/>
+        <variable name="ResolveIPOut" xmlns:tns="http://ws.cdyne.com/" messageType="tns:ResolveIPSoapOut"/>
+        <variable name="ResolveIPIn" xmlns:tns="http://ws.cdyne.com/" messageType="tns:ResolveIPSoapIn"/>
+        <variable name="ClientInAddr" xmlns:tns="http://j2ee.netbeans.org/wsdl/WeatherFromIP/src/ClientWSDL" messageType="tns:ClientWSDLOperationRequest"/>
+    </variables>
+    <sequence>
+        <receive name="ReceiveIPAddress" createInstance="yes" partnerLink="PartnerLink2" operation="ClientWSDLOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/WeatherFromIP/src/ClientWSDL" portType="tns:ClientWSDLPortType" variable="ClientInAddr"/>
+        <assign name="Assign1">
+            <copy>
+                <from>string($ClientInAddr.inputIPaddress)</from>
+                <to>$ResolveIPIn.parameters/ns0:ipAddress</to>
+            </copy>
+            <copy>
+                <from>'0'</from>
+                <to>$ResolveIPIn.parameters/ns0:licenseKey</to>
+            </copy>
+        </assign>
+        <invoke name="InvokeIP2GEO" partnerLink="PartnerLink3" operation="ResolveIP" xmlns:tns="http://ws.cdyne.com/" portType="tns:IP2GeoSoap" inputVariable="ResolveIPIn" outputVariable="ResolveIPOut"/>
+        <assign name="Assign2">
+            <copy>
+                <from>concat($ResolveIPOut.parameters/ns0:ResolveIPResult/ns0:City, ',', $ResolveIPOut.parameters/ns0:ResolveIPResult/ns0:CountryCode)</from>
+                <to variable="OWMInput" sxnmp:nmProperty="org.glassfish.openesb.rest.params.q"/>
+            </copy>
+            <copy>
+                <from>'xml'</from>
+                <to variable="OWMInput" sxnmp:nmProperty="org.glassfish.openesb.rest.params.mode"/>
+            </copy>
+            <copy>
+                <from>'0b640ea9b2e2395cb52f257ea259f62d'</from>
+                <to variable="OWMInput" sxnmp:nmProperty="org.glassfish.openesb.rest.params.appid"/>
+            </copy>
+        </assign>
+        <invoke name="InvokeOWM" partnerLink="PartnerLink1" operation="OpenWeatherGET" xmlns:tns="http://j2ee.netbeans.org/wsdl/WeatherFromIP/src/OpenWeatherMapWDSL" portType="tns:RestOutboundPortType" inputVariable="OWMInput" outputVariable="OWMOutput"/>
+        <assign name="Assign3">
+            <copy>
+                <from>substring-before(substring-after(substring-after(sxxf:doMarshal($OWMOutput.weather_res), 'number="'), '" value="'), '"/&gt;')</from>
+                <to variable="ClientOutWeather" part="outputWeather"/>
+            </copy>
+        </assign>
+        <reply name="ReplyWeather" partnerLink="PartnerLink2" operation="ClientWSDLOperation" xmlns:tns="http://j2ee.netbeans.org/wsdl/WeatherFromIP/src/ClientWSDL" portType="tns:ClientWSDLPortType" variable="ClientOutWeather"/>
+    </sequence>
+</process>

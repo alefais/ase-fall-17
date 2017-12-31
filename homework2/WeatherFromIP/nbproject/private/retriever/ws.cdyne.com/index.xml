@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>Visit the CDYNE WIKI or The Main CDYNE Site</title>
+	</head>
+<body>
+
+<p>Please visit the CDYNE HOMEPAGE at <a href="http://www.cdyne.com">www.cdyne.com</a>.</p>
+<p>The CDYNE WIKI is a great source of information for using CDYNE Services: <a href="http://wiki.cdyne.com">wiki.cdyne.com</a>.</p>
+	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+	</script>
+	<script type="text/javascript">
+	_uacct = "UA-399624-2";
+	urchinTracker();
+	</script>
+<!-- Start Quantcast tag -->
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+<script type="text/javascript">
+_qacct="p-e6Ig_pWxhW_Jk";quantserve();</script>
+<noscript>
+<img src="http://pixel.quantserve.com/pixel/p-e6Ig_pWxhW_Jk.gif" style="display: none" height="1" width="1" alt="Quantcast"/></noscript>
+<!-- End Quantcast tag -->
+
+</body>
+</html>

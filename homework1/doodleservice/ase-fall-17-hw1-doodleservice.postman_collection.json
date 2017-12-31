@@ -1,0 +1,1061 @@
+{
+	"info": {
+		"name": "ase-fall-17-hw1-doodleservice",
+		"_postman_id": "db468811-c3b4-c6db-afe6-0cf4534d32c8",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "heroku-test1",
+			"description": "Test the GET, PUT, DELETE operations on the doodles.",
+			"item": [
+				{
+					"name": "/doodles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles"
+							]
+						},
+						"description": "Get all the doodles (empty list)"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Breakfast\",\n\t\"options\": [\n\t\t\"Milk\", \n\t\t\"Coffee\", \n\t\t\"Orange juice\"\n\t]\n}"
+						},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								""
+							]
+						},
+						"description": "Create doodle with ID 0"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles/0",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"option\": \"one\",\n\t\"name\": \"ale\"\n}"
+						},
+						"url": {
+							"raw": "http://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/0",
+							"protocol": "http",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								"0"
+							]
+						},
+						"description": "Get doodle with ID 0"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Graduation party\",\n\t\"options\": [\n\t\t\"Friday\", \n\t\t\"Saturday\", \n\t\t\"Sunday\"\n\t]\n}"
+						},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								""
+							]
+						},
+						"description": "Create doodle with ID 1"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Weekend\",\n\t\"options\": [\n\t\t\"Rome\", \n\t\t\"Florence\", \n\t\t\"Venice\"\n\t]\n}"
+						},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								""
+							]
+						},
+						"description": "Create doodle with ID 2"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles"
+							]
+						},
+						"description": "Get all the doodles (IDs: 0, 1, 2)"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles/2/vote",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"option\": \"Rome\",\n\t\"name\": \"Alice\"\n}"
+						},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/2/vote",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								"2",
+								"vote"
+							]
+						},
+						"description": "Put a valid vote in doodle ID 2"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles/2/vote",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"option\": \"Florence\",\n\t\"name\": \"Fred\"\n}"
+						},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/2/vote",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								"2",
+								"vote"
+							]
+						},
+						"description": "Put a valid vote in doodle ID 2"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles/2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"option\": \"one\",\n\t\"name\": \"ale\"\n}"
+						},
+						"url": {
+							"raw": "http://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/2",
+							"protocol": "http",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								"2"
+							]
+						},
+						"description": "Get doodle with ID 2"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles"
+							]
+						},
+						"description": "Get all the doodles (IDs: 0, 1, 2)"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles/1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/1",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								"1"
+							]
+						},
+						"description": "Delete the doodle with ID 1"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"option\": \"one\",\n\t\"name\": \"ale\"\n}"
+						},
+						"url": {
+							"raw": "http://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles",
+							"protocol": "http",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles"
+							]
+						},
+						"description": "Get all the doodles (IDs: 0, 2)"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles/1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"option\": \"one\",\n\t\"name\": \"ale\"\n}"
+						},
+						"url": {
+							"raw": "http://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/1",
+							"protocol": "http",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								"1"
+							]
+						},
+						"description": "Get the doodle with ID 1 (deleted)"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles/2",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/2",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								"2"
+							]
+						},
+						"description": "Delete the doodle with ID 2"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"option\": \"one\",\n\t\"name\": \"ale\"\n}"
+						},
+						"url": {
+							"raw": "http://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles",
+							"protocol": "http",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles"
+							]
+						},
+						"description": "Get all the doodles (IDs: 0)"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"New doodle\",\n\t\"options\": [\n\t\t\"First\", \n\t\t\"Second\", \n\t\t\"Third\"\n\t]\n}"
+						},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								""
+							]
+						},
+						"description": "Create a doodle with ID 3"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"option\": \"one\",\n\t\"name\": \"ale\"\n}"
+						},
+						"url": {
+							"raw": "http://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles",
+							"protocol": "http",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles"
+							]
+						},
+						"description": "Get all the doodles (IDs: 0, 3)"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "heroku-test2",
+			"description": "Test the GET, PUT, POST, DELETE operations on the votes.",
+			"item": [
+				{
+					"name": "/doodles",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Breakfast\",\n\t\"options\": [\n\t\t\"Milk\", \n\t\t\"Coffee\", \n\t\t\"Orange juice\"\n\t]\n}"
+						},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								""
+							]
+						},
+						"description": "Create doodle with ID 0"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Graduation party\",\n\t\"options\": [\n\t\t\"Friday\", \n\t\t\"Saturday\", \n\t\t\"Sunday\"\n\t]\n}"
+						},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								""
+							]
+						},
+						"description": "Create doodle with ID 1"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Weekend\",\n\t\"options\": [\n\t\t\"Rome\", \n\t\t\"Florence\", \n\t\t\"Venice\"\n\t]\n}"
+						},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								""
+							]
+						},
+						"description": "Create doodle with ID 2"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles"
+							]
+						},
+						"description": "Get all the doodles (empty list)"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles/0/vote",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"option\": \"Coffee\",\n\t\"name\": \"Ale\"\n}"
+						},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/0/vote",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								"0",
+								"vote"
+							]
+						},
+						"description": "Add a valid vote to doodle with ID 0"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles/0/vote",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"option\": \"Milk\",\n\t\"name\": \"Max\"\n}"
+						},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/0/vote",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								"0",
+								"vote"
+							]
+						},
+						"description": "Add a valid vote to doodle with ID 0"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles/1/vote",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"option\": \"Saturday\",\n\t\"name\": \"Max\"\n}"
+						},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/1/vote",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								"1",
+								"vote"
+							]
+						},
+						"description": "Add a valid vote to doodle with ID 1"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles"
+							]
+						},
+						"description": "Get all the doodles"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles/1/vote/Wilma",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"option\": \"Third\",\n\t\"name\": \"Max\"\n}"
+						},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/1/vote/Wilma",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								"1",
+								"vote",
+								"Wilma"
+							]
+						},
+						"description": "Get the vote of an invalid user in the doodle with ID 1"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles/1/vote/Max",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"option\": \"Third\",\n\t\"name\": \"Max\"\n}"
+						},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/1/vote/Max",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								"1",
+								"vote",
+								"Max"
+							]
+						},
+						"description": "Get the vote of a valid user in the doodle with ID 1"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles/3/vote",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"option\": \"Third\",\n\t\"name\": \"Jack\"\n}"
+						},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/3/vote",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								"3",
+								"vote"
+							]
+						},
+						"description": "Add a vote to doodle with ID 3 (the doodle doesn't exist)"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles/3",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"option\": \"Third\",\n\t\"name\": \"Max\"\n}"
+						},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								""
+							]
+						},
+						"description": "Get the state of doodle with ID 3"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles/1/vote/Max",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"option\": \"Friday\",\n\t\"name\": \"Max\"\n}"
+						},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/1/vote/Max",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								"1",
+								"vote",
+								"Max"
+							]
+						},
+						"description": "Update the vote of Max in doodle 1 (he already voted)"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles/1/vote/Wilma",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"option\": \"Saturday\",\n\t\"name\": \"Wilma\"\n}"
+						},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/1/vote/Wilma",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								"1",
+								"vote",
+								"Wilma"
+							]
+						},
+						"description": "Try to update the vote of Wilma in the doodle with ID 1 but this is the first vote for Wilma (update not valid)"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles/1",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"option\": \"Third\",\n\t\"name\": \"Max\"\n}"
+						},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/1",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								"1"
+							]
+						},
+						"description": "Get the state of doodle with ID 1"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles/0/vote",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"option\": \"Orange juice\",\n\t\"name\": \"Ale\"\n}"
+						},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/0/vote",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								"0",
+								"vote"
+							]
+						},
+						"description": "Add a vote for Ale in the doodle with ID 0 (Ale already voted and the insertion has no effect)"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles/0",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"option\": \"Third\",\n\t\"name\": \"Max\"\n}"
+						},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/0",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								"0"
+							]
+						},
+						"description": "Get the state of doodle with ID 0"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles/1/vote/Max",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/0/vote/Max",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								"0",
+								"vote",
+								"Max"
+							]
+						},
+						"description": "Delete the vote of Max from the doodle with ID 1"
+					},
+					"response": []
+				},
+				{
+					"name": "/doodles/3",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"option\": \"Third\",\n\t\"name\": \"Max\"\n}"
+						},
+						"url": {
+							"raw": "https://ase-fall-17-hw1-doodleservice.herokuapp.com/doodles/0",
+							"protocol": "https",
+							"host": [
+								"ase-fall-17-hw1-doodleservice",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"doodles",
+								"0"
+							]
+						},
+						"description": "Get the state of doodle with ID 3"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
